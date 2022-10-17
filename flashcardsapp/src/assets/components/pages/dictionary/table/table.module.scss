@@ -13,10 +13,9 @@ $boldFont: Genos;
     display: grid;
     column-gap: 57px;
     font-family: $mainFont;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
-    border: 2px solid $customBlue;
-    border-radius: 25px;
+    line-height: 39px;
     color: $customBlue;
 }
 
@@ -29,11 +28,48 @@ $boldFont: Genos;
     grid-template-columns: 54px repeat(3, 310px);
 }
 
-.tableNumberTitle {
-    width: 54px;
-    height: 54px;
-    border: 2px solid $customBlue;
+.tableNumberTitle, 
+.tableWordTitle,
+.tableTranscriptionTitle,
+.tableTranslationTitle,
+.tableNumber,
+.tableWord,
+.tableTranscription,
+.tableTranslation {
     border-radius: 25px;
     background-color: $customWhite;
 }
+
+.tableWordTitle,
+.tableTranscriptionTitle,
+.tableTranslationTitle,
+.tableWord,
+.tableTranscription,
+.tableTranslation {
+    width: 310px;
+    height: 68px;
+}
+
+.tableNumberTitle, 
+.tableWordTitle,
+.tableTranscriptionTitle,
+.tableTranslationTitle,
+.tableNumber {
+    border: 2px solid $customBlue;
+}
+
+.tableWord,
+.tableTranscription,
+.tableTranslation {
+    border: 2px solid $customGray;
+}
+
+.tableNumberTitle,
+.tableNumber,
+.deleteBtn {
+    width: 54px;
+    height: 54px;
+}
+
+
 
