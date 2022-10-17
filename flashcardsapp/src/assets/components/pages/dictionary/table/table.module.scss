@@ -41,7 +41,8 @@ $boldFont: Genos;
 .tableNumber,
 .tableWord,
 .tableTranscription,
-.tableTranslation {
+.tableTranslation,
+.addNewWord {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +64,8 @@ $boldFont: Genos;
 .tableWordTitle,
 .tableTranscriptionTitle,
 .tableTranslationTitle,
-.tableNumber {
+.tableNumber,
+.addNewWord {
     border: 2px solid $customBlue;
 }
 
@@ -71,13 +73,43 @@ $boldFont: Genos;
 .tableTranscription,
 .tableTranslation {
     border: 2px solid $customGray;
+    cursor: pointer;
+    &:hover {
+        border: 2px solid $customBlue;
+    }
 }
 
 .tableNumberTitle,
 .tableNumber,
-.deleteBtn {
+.deleteBtn,
+.addNewWord {
     width: 54px;
     height: 54px;
+}
+
+.deleteBtn,
+.addNewWord {
+    cursor: pointer;
+    &:hover {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.addNewWord {
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 32px;
+    color: $customBlue;
+    &:hover {
+        border: 2px solid $customRed;
+        color: $customRed;
+    }
+}
+
+.addBtn {
+    display: flex;
+    justify-content: center;
 }
 
 

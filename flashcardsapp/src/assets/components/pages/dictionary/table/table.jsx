@@ -21,6 +21,9 @@ function Table(props) {
                         <img src="../../../../assets/pics/dictionary/deleteBtn.svg" alt="delte" className={styles.deletePic} />
                     </button>
                 </div>
+                <div className={styles.addBtn}>
+                    <div className={styles.addNewWord}>+</div>
+                </div>
             </div>
         </>
     );

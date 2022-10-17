@@ -5,6 +5,7 @@ $customBlue: #6BB3E7;
 $customWhite: #F5F5F5;
 $customGray: #C7D1D8;
 $customRed: #E76B6B;
+$hoverColor: #5C88FF;
 $mainFont: 'Montserrat', sans-serif;
 $boldFont: Genos;
 
@@ -24,5 +25,9 @@ $boldFont: Genos;
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
+    cursor: pointer;
     color: #000000;
+    &:hover {
+        color: $hoverColor;
+    }
 }

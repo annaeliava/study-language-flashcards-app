@@ -5,6 +5,7 @@ $customBlue: #6BB3E7;
 $customWhite: #F5F5F5;
 $customGray: #C7D1D8;
 $customRed: #E76B6B;
+$hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
@@ -32,12 +33,25 @@ $boldFont: Genos;
     position: absolute;
     top: 25px;
     left: 1206px;
+    cursor: pointer;
+    &:hover {
+        font-size: 37px;
+        color: $hoverColor;
+    }
 }
 
 .homeBtn {
     position: absolute;
     top: 30px;
     left: 1267px;
+    width: 44px;
+    height: 33px;
+    cursor: pointer;
+    &:hover {
+        width: 45px;
+        height: 34px;
+        color: $hoverColor;
+    }
 }
 
 .myaccount {
@@ -46,6 +60,11 @@ $boldFont: Genos;
     left: 1345px;
     width: 66px;
     height: 61px;
+    cursor: pointer;
+    &:hover {
+        width: 67px;
+        height: 62px;
+    }
 }
 
 .headerLine {
