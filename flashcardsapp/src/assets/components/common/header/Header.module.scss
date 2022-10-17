@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+$bodyColor: #E0F0FA;
+$customBlue: #6BB3E7;
+$customWhite: #F5F5F5;
+$customGray: #C7D1D8;
+$customRed: #E76B6B;
+$mainFont: Montserrat;
+$boldFont: Genos;
+
+.title, .currentLanguage {
+    font-family: $boldFont;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.title {
+    position: absolute;
+    top: 25px;
+    left: 49px;
+}
+
+.currentLanguage {
+    position: absolute;
+    top: 25px;
+    left: 1206px;
+}
+
+.homeBtn {
+    position: absolute;
+    top: 30px;
+    left: 1267px;
+}
+
+.myaccount {
+    position: absolute;
+    top: 16px;
+    left: 1345px;
+}
+
+.headerLine {
+    position:absolute;
+    top: 89px;
+    left: 27px;
+    width: 1250px;
+    border: 1px solid #5C88FF;
+}

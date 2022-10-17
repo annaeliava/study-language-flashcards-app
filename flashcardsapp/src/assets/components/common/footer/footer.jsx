@@ -1,15 +1,16 @@
 import React from 'react';
+import styles from './Footer.module.scss';
+import 'normalize.css';
 
 function Footer() {
     return (
         <>
-            <div className='container'>
-                <div className='home'>home</div>
-                <div className='account'>account</div>
-                <div className='about'>about</div>
-                <div className='contacts'>contacts</div>
+            <div className={styles.container}>
+                <div className={styles.homeLink}>home</div>
+                <div className={styles.myaccountLink}>account</div>
+                <div className={styles.aboutlink}>about</div>
+                <div className={styles.contactsLink}>contacts</div>
             </div>
-            <hr></hr>
         </>
     );
 }

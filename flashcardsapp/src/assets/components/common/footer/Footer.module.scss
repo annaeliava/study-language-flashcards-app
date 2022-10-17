@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+$bodyColor: #E0F0FA;
+$customBlue: #6BB3E7;
+$customWhite: #F5F5F5;
+$customGray: #C7D1D8;
+$customRed: #E76B6B;
+$mainFont: 'Montserrat', sans-serif;
+$boldFont: Genos;
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 84px;
+    background-color: $customGray;
+}
+
+.homeLink, .myaccountLink, .aboutlink, .contactsLink {
+    font-family: $mainFont;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #000000;
+}
