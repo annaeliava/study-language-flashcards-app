@@ -12,7 +12,7 @@ function Dictionary() {
         <>
             <div className="container">
                 <div className={styles.title}>dictionary</div>
-                <Table />
+                {voc.map((voc) => < Table number={voc.number} word={voc.word} transcription={voc.transcription} translation={voc.translation} />)}
             </div>
         </>
     );

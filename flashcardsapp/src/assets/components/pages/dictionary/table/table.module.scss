@@ -8,15 +8,32 @@ $customRed: #E76B6B;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
-.titleContainer {
+.titleContainer, 
+.innerContainer {
     display: grid;
-    grid-template-columns: 54px repeat(3, 310px) 54px;
     column-gap: 57px;
+    font-family: $mainFont;
+    font-weight: bold;
+    font-size: 32px;
+    border: 2px solid $customBlue;
+    border-radius: 25px;
+    color: $customBlue;
 }
 
-.mainContainer {
-    display: grid;
+.titleContainer {
     grid-template-columns: 54px repeat(3, 310px);
-    column-gap: 57px;
+    text-transform: uppercase;
+}
+
+.innerContainer {
+    grid-template-columns: 54px repeat(3, 310px);
+}
+
+.tableNumberTitle {
+    width: 54px;
+    height: 54px;
+    border: 2px solid $customBlue;
+    border-radius: 25px;
+    background-color: $customWhite;
 }
 
