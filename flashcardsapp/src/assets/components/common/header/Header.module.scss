@@ -8,6 +8,12 @@ $customRed: #E76B6B;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+.mainContainer {
+    position: sticky;
+    top: 0;
+    background-color: $bodyColor;
+}
+
 .title, 
 .currentLanguage {
     font-family: $boldFont;
@@ -38,6 +44,8 @@ $boldFont: Genos;
     position: absolute;
     top: 16px;
     left: 1345px;
+    width: 66px;
+    height: 61px;
 }
 
 .headerLine {
@@ -45,5 +53,7 @@ $boldFont: Genos;
     top: 89px;
     left: 27px;
     width: 1250px;
+    height: 0;
     border: 1px solid #5C88FF;
+    background-color: $bodyColor;
 }
