@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../Header.jsx';
-import Footer from '../Footer.jsx';
 
 const btns = [
     { bg: 'E76B6B', icon: '/flashcardsapp/src/assets/pics/answerbtn/no.svg' },
@@ -11,11 +9,9 @@ const btns = [
 function Flashcards() {
     return (
         <>
-            <Header />
             <div className="container">
                 {btns.map((btns) => <Answer bg={btns.bg} icon={btns.icon} />)}
             </div>
-            <Footer />
         </>
     );
 }

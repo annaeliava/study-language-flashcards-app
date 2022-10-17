@@ -1,24 +1,19 @@
 import React from 'react';
-import Header from '../Header.jsx';
-import Footer from '../Footer.jsx';
+import Table from './table/table.jsx';
+import styles from './dictionary.module.scss';
+import 'normalize.css';
+
+const voc = [
+    { number: '1', word: 'finger', transcription: '[ˈfɪŋɡə]', translation: 'палец' }
+];
 
 function Dictionary() {
     return (
         <>
-            <Header />
-            <div className='title'>dictionary</div>
             <div className="container">
-                <div className='tableNumberTitle'>№</div>
-                <div className='tableWordTitle'>word</div>
-                <div className='tableTranscriptionTitle'>transcription</div>
-                <div className='tableTranslationTitle'>translation</div>
-                <div className='tableNumber'>1</div>
-                <div className='tableWord'>finger</div>
-                <div className='tableTranscription'>[ˈfɪŋɡə]</div>
-                <div className='tableTranslation'>палец</div>
-                <button></button>
+                <div className={styles.title}>dictionary</div>
+                <Table />
             </div>
-            <Footer />
         </>
     );
 }

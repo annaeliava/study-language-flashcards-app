@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../Header.jsx';
-import Footer from '../Footer.jsx';
 import Topic from '../main/topics/topic.jsx';
 import Sidebar from './sidebar/sidebar.jsx';
 
@@ -20,12 +18,10 @@ const menu = [
 function Main() {
     return (
         <>
-            <Header />
             <div className="container">
                 {topics.map((topics) => <Topic topic={topics.topic} quantity={topics.quantity} />)}
                 {menu.map((menu) => <Sidebar pic={menu.pic} sidebar={menu.sidebar} />)}
             </div>
-            <Footer />
         </>
     );
 }

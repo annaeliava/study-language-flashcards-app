@@ -1,9 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 $bodyColor: #E0F0FA;
 $customBlue: #6BB3E7;
 $customWhite: #F5F5F5;
 $customGray: #C7D1D8;
 $customRed: #E76B6B;
-$mainFont: Montserrat;
+$mainFont: 'Montserrat', sans-serif;
 $boldFont: Genos;
+
+.container {
+
+}
+
+.title{
+    display: flex;
+    justify-content: center ;
+    text-transform: uppercase;
+    font-family: $mainFont;
+    font-size: 32px;
+    line-height: 39px;
+    color: $customBlue;
+}

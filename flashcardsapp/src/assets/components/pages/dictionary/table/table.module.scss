@@ -8,3 +8,15 @@ $customRed: #E76B6B;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+.titleContainer {
+    display: grid;
+    grid-template-columns: 54px repeat(3, 310px) 54px;
+    column-gap: 57px;
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 54px repeat(3, 310px);
+    column-gap: 57px;
+}
+
