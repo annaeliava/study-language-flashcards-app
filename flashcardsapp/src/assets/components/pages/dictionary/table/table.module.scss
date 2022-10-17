@@ -8,6 +8,12 @@ $customRed: #E76B6B;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+.mainContainer {
+    display: grid;
+    row-gap: 13px;
+    margin-left: 86px;
+}
+
 .titleContainer, 
 .innerContainer {
     display: grid;
@@ -36,6 +42,9 @@ $boldFont: Genos;
 .tableWord,
 .tableTranscription,
 .tableTranslation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 25px;
     background-color: $customWhite;
 }
