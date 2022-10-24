@@ -18,6 +18,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "@fontsource/genos/700.css";
+import HomeImg from '../../../../../public/assets/img/header_home-icon.svg';
+import MyAccountImg from "./userpic.svg";
 import styles from './Header.module.scss';
 import 'normalize.css';
 
@@ -126,8 +128,8 @@ export default function Header() {
         <div className={styles.container}>
           <div className={styles.title}>IKNOWTHIS</div>
           <div className={styles.currentLanguage}>EN</div>
-          <img src='/flashcardsapp/src/assets/pics/header/header_home-icon.svg' alt='Home Icon' className={styles.homeBtn} />
-          <img src="/flashcardsapp/src/assets/pics/common/userpic.svg" alt="Userpic" className={styles.myaccount} />
+          <img src={HomeImg} alt='Home Icon' className={styles.homeBtn} />
+          <img src={MyAccountImg} alt="Userpic" className={styles.myaccount} />
         </div>
         <div className={styles.headerLine}></div>
       </div>

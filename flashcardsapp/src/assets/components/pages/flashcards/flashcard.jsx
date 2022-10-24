@@ -10,7 +10,7 @@ function Flashcards() {
     return (
         <>
             <div className="container">
-                {btns.map((btns) => <Answer bg={btns.bg} icon={btns.icon} />)}
+                {btns.map(btns => <Answer bg={btns.bg} icon={btns.icon} />)}
             </div>
         </>
     );

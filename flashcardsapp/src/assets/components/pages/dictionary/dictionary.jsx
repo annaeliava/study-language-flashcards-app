@@ -3,7 +3,7 @@ import Table from './table/table.jsx';
 import styles from './dictionary.module.scss';
 import 'normalize.css';
 
-const voc = [
+const vocabulary = [
     { number: '1', word: 'finger', transcription: '[ˈfɪŋɡə]', translation: 'палец' }
 ];
 
@@ -12,7 +12,7 @@ export default function Dictionary() {
         <>
             <div className="container">
                 <div className={styles.title}>dictionary</div>
-                {voc.map(voc => < Table number={voc.number} word={voc.word} transcription={voc.transcription} translation={voc.translation} />)}
+                {vocabulary.map(word => < Table number={word.number} word={word.word} transcription={word.transcription} translation={word.translation} />)}
             </div>
         </>
     );
