@@ -9,11 +9,22 @@ $hoverColor: #5C88FF;
 $mainFont: 'Montserrat', sans-serif;
 $boldFont: Genos;
 
+@media only screen and (min-width: 0) and (max-width: 929px) {
+    .container {
+        flex-direction:column;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .container {
+        justify-content: space-evenly;
+        align-items: center;
+        height: 84px;
+    }
+}
+
 .container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 84px;
     background-color: $customGray;
 }
 

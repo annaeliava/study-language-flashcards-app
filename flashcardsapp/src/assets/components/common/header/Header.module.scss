@@ -9,13 +9,13 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
-@media only screen and (min-width: 0) and (max-width: 929px) {
+@media only screen and (min-width: 0) and (max-width: 959px) {
     .mainContainer {
         display: none;
     }
 }
 
-@media only screen and (min-width: 930px) {
+@media only screen and (min-width: 960px) {
     .mainContainer {
         position: sticky;
         top: 0;
