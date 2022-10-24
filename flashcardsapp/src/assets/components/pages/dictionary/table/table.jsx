@@ -2,7 +2,7 @@ import React from "react";
 import styles from './table.module.scss';
 import 'normalize.css';
 
-function Table(props) {
+export default function Table(props) {
     return (
         <>
             <div className={styles.mainContainer}>
@@ -17,16 +17,12 @@ function Table(props) {
                     <div className={styles.tableWord}>{props.word}</div>
                     <div className={styles.tableTranscription}>{props.transcription}</div>
                     <div className={styles.tableTranslation}>{props.translation}</div>
-                    <button className={styles.deleteBtn}>
-                        <img src="../../../../assets/pics/dictionary/deleteBtn.svg" alt="delte" className={styles.deletePic} />
-                    </button>
+                    <button className={styles.deleteBtn}>X</button>
                 </div>
-                <div className={styles.addBtn}>
-                    <div className={styles.addNewWord}>+</div>
+                <div className={styles.btnContainer}>
+                    <button className={styles.addBtn}>+</button>
                 </div>
             </div>
         </>
     );
 }
-
-export default Table;

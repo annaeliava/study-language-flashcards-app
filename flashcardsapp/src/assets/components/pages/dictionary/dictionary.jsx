@@ -7,15 +7,13 @@ const voc = [
     { number: '1', word: 'finger', transcription: '[ˈfɪŋɡə]', translation: 'палец' }
 ];
 
-function Dictionary() {
+export default function Dictionary() {
     return (
         <>
             <div className="container">
                 <div className={styles.title}>dictionary</div>
-                {voc.map((voc) => < Table number={voc.number} word={voc.word} transcription={voc.transcription} translation={voc.translation} />)}
+                {voc.map(voc => < Table number={voc.number} word={voc.word} transcription={voc.transcription} translation={voc.translation} />)}
             </div>
         </>
     );
 }
-
-export default Dictionary;

@@ -5,8 +5,6 @@ body {
 }
 
 .App {
-    height: 1024px;
-    width: 1440px;
     display: grid;
     grid-template-rows: 89px minmax(823px, auto) 84px;
     row-gap: 14px;
