@@ -8,3 +8,25 @@ $customRed: #E76B6B;
 $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
+
+.container {
+    padding-top: 39px;
+    padding-left: 53px;
+    padding-right: 53px;
+    width: 817px;
+    height: 130px;
+    border: 1px $customWhite;
+    background-color: $customWhite;
+}
+
+.topic,
+.quantity {
+    font-family: $mainFont;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+}
+
+.topic {
+    text-transform: uppercase;
+}
