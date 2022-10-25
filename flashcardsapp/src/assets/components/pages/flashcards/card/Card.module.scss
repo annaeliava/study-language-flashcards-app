@@ -8,3 +8,91 @@ $customRed: #E76B6B;
 $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
+
+.cardBody {
+    position: relative;
+    left: 236px;
+    padding-top: 11px;
+    width: 652px;
+    height: 430px;
+    border: 1px $customWhite;
+    border-radius: 46px;
+    background-color: $customWhite;
+    cursor: pointer;
+}
+
+.topic {
+    margin-top: 11px;
+    text-align: center;
+    font-family: $boldFont;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #A3B0B9;
+}
+
+.word {
+    margin-top: 82px;
+    text-align: center;
+    font-family: $mainFont;
+    font-size: 96px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.transcription,
+.numbers {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+}
+
+.transcription {
+    margin-top: 32px;
+    text-align: center;
+    font-family: $mainFont;
+}
+
+.translation,
+.translations {
+    display: none;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    font-family: $boldFont;
+}
+
+.showTranslation {
+    .word{
+        display: none;
+    }
+
+    .transcription {
+        display: none;
+    }
+
+    .translation,
+    .translations {
+        display: block; 
+        font-family: $mainFont;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    .translation {
+        margin-top: 82px;
+        text-align: center;
+        font-size: 96px;
+    }
+
+    .translations {
+        margin-top: 32px;
+        text-align: center;
+        font-size: 36px;
+    }
+}
