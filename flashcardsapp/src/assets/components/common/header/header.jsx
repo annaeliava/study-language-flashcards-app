@@ -18,8 +18,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "@fontsource/genos/700.css";
-import HomeImg from '../../../../../public/assets/img/header_home-icon.svg';
-import MyAccountImg from "./userpic.svg";
+//import { ReactComponent as HomeImg } from './header_home-icon.svg';
+//import { ReactComponent as User } from "./userpic.svg";
 import styles from './Header.module.scss';
 import 'normalize.css';
 
@@ -63,10 +63,10 @@ export default function Header() {
     <>
       <ThemeProvider theme={headerMobile}>
         <Box sx={{
-          display: { xs: 'block', sm: 'block', md: 'block', lg: 'none', xl: 'none' },
+          display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' },
           flexGrow: 1,
         }}>
-          <AppBar component='nav' position="fixed" sx={{ backgroundColor: 'background.body', }}>
+          <AppBar className={styles.headerMUI} component='nav' position="fixed" sx={{ backgroundColor: 'background.body', }}>
             <Toolbar>
               <IconButton
                 size="large"
@@ -84,7 +84,7 @@ export default function Header() {
                   fontFamily: 'Genos',
                   fontSize: 32,
                   fontWeight: 700,
-                  color: 'text.primary',
+                  color: 'details.blue',
                 }}>
                 IKNOWTHIS
               </Typography>
@@ -128,8 +128,8 @@ export default function Header() {
         <div className={styles.container}>
           <div className={styles.title}>IKNOWTHIS</div>
           <div className={styles.currentLanguage}>EN</div>
-          <img src={HomeImg} alt='Home Icon' className={styles.homeBtn} />
-          <img src={MyAccountImg} alt="Userpic" className={styles.myaccount} />
+          {/*<HomeImg className={styles.homeBtn} />
+          <User className={styles.myaccount} />*/}
         </div>
         <div className={styles.headerLine}></div>
       </div>

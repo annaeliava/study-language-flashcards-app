@@ -9,3 +9,9 @@ body {
     grid-template-rows: 89px minmax(823px, auto) 84px;
     row-gap: 14px;
 }
+
+@media screen and (max-width: 480px) {
+    .App {
+        grid-template-rows: 56px minmax(823px, auto) 90px;
+    }
+}

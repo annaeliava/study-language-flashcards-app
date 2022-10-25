@@ -21,3 +21,11 @@ $boldFont: Genos;
     line-height: 39px;
     color: $customBlue;
 }
+
+@media screen and (max-width: 480px)  {
+    .title {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+}

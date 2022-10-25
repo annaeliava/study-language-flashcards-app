@@ -1,19 +1,19 @@
 import React from 'react';
+import Card from './card/card';
 
-const btns = [
+const answerButtons_data = [
     { bg: 'E76B6B', icon: '/flashcardsapp/src/assets/pics/answerbtn/no.svg' },
     { bg: '6BB3E7', icon: '/flashcardsapp/src/assets/pics/answerbtn/dictionary.svg' },
     { bg: '92E76B', icon: '/flashcardsapp/src/assets/pics/answerbtn/yes.svg' }
 ]
 
-function Flashcards() {
+export default function Flashcards() {
     return (
         <>
+            <Card />
             <div className="container">
-                {btns.map(btns => <Answer bg={btns.bg} icon={btns.icon} />)}
+                {answerButtons_data.map(button => <Answer bg={button.bg} icon={button.icon} />)}
             </div>
         </>
     );
 }
-
-export default Flashcards;

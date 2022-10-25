@@ -9,13 +9,84 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
-@media only screen and (min-width: 0) and (max-width: 959px) {
+@media only screen and (min-width: 0) and (max-width: 900px) {
     .mainContainer {
         display: none;
     }
+
+    .headerMUI {
+        width: 100%;
+    }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 901px) and (max-width: 1279px) {
+    .mainContainer {
+        position: sticky;
+        top: 0;
+        background-color: $bodyColor;
+    }
+    
+    .title, 
+    .currentLanguage {
+        font-family: $boldFont;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+    
+    .title {
+        position: absolute;
+        top: 25px;
+        left: 49px;
+    }
+    
+    .currentLanguage {
+        margin-top: 25px;
+        margin-left: 600px;
+        cursor: pointer;
+        &:hover {
+            font-size: 37px;
+            color: $hoverColor;
+        }
+    }
+    
+    .homeBtn {
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 44px;
+        height: 33px;
+        cursor: pointer;
+        &:hover {
+            width: 45px;
+            height: 34px;
+            color: $hoverColor;
+        }
+    }
+    
+    .myaccount {
+        margin-top: 16px;
+        margin-left: 10px;
+        width: 66px;
+        height: 61px;
+        cursor: pointer;
+        &:hover {
+            width: 67px;
+            height: 62px;
+        }
+    }
+    
+    .headerLine {
+        position:absolute;
+        top: 89px;
+        left: 27px;
+        width: 92%;
+        height: 0;
+        border: 1px solid #5C88FF;
+        background-color: $bodyColor;
+    }
+}
+
+@media screen and (min-width:1280px) {
     .mainContainer {
         position: sticky;
         top: 0;
@@ -78,7 +149,7 @@ $boldFont: Genos;
         position:absolute;
         top: 89px;
         left: 27px;
-        width: 1250px;
+        width: 92%;
         height: 0;
         border: 1px solid #5C88FF;
         background-color: $bodyColor;

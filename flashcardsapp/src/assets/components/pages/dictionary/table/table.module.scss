@@ -9,30 +9,16 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
-.mainContainer {
-    display: grid;
-    row-gap: 13px;
-    margin-left: 86px;
-}
-
 .titleContainer, 
 .innerContainer {
-    display: grid;
-    column-gap: 57px;
     font-family: $mainFont;
     font-weight: 700;
-    font-size: 32px;
     line-height: 39px;
     color: $customBlue;
 }
 
 .titleContainer {
-    grid-template-columns: 54px repeat(3, 310px);
     text-transform: uppercase;
-}
-
-.innerContainer {
-    grid-template-columns: 54px repeat(3, 310px);
 }
 
 .tableNumberTitle, 
@@ -49,16 +35,6 @@ $boldFont: Genos;
     align-items: center;
     border-radius: 25px;
     background-color: $customWhite;
-}
-
-.tableWordTitle,
-.tableTranscriptionTitle,
-.tableTranslationTitle,
-.tableWord,
-.tableTranscription,
-.tableTranslation {
-    width: 310px;
-    height: 68px;
 }
 
 .tableNumberTitle, 
@@ -80,37 +56,26 @@ $boldFont: Genos;
     }
 }
 
-.tableNumberTitle,
-.tableNumber,
-.deleteBtn,
-.addBtn {
-    width: 54px;
-    height: 54px;
-}
-
 .deleteBtn,
 .addBtn {
     cursor: pointer;
-    &:hover {
-        width: 55px;
-        height: 55px;
-    }
 }
 
 .deleteBtn {
     font-family: $mainFont;
-    font-size: 32px;
     font-weight: 700;
     border-radius: 25px;
     border-style:none;
     background-color: $customRed;
     color: white;
+    &:hover {
+        color:$customGray;
+    }
 }
 
 .addBtn {
     font-family: $mainFont;
     font-weight: 700;
-    font-size: 32px;
     color: $customBlue;
     &:hover {
         border: 2px solid $customRed;
@@ -123,5 +88,240 @@ $boldFont: Genos;
     justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 10px;
+        justify-content: center;
+    }
+    
+    .titleContainer, 
+    .innerContainer {
+        display: grid;
+        column-gap: 8px;
+        font-size: 12px;
+        line-height: 39px;
+    }
+    
+    .titleContainer {
+        grid-template-columns: repeat(3, 105px);
+    }
+    
+    .innerContainer {
+        grid-template-columns: repeat(3, 105px);
+    }
+    
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranscription,
+    .tableTranslation {
+        width: 105px;
+        height: 50px;
+    }
 
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranslation,
+    .tableTranscription {
+        border-radius: 10px;
+    }
+    
+    .addBtn {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .tableNumberTitle,
+    .tableNumber,
+    .deleteBtn {
+        display: none
+    }
+    
+    .addBtn {
+        font-size: 12px;
+    }
+}
 
+@media screen and (min-width:481px) and (max-width:768px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 10px;
+        justify-content: center;
+    }
+    
+    .titleContainer, 
+    .innerContainer {
+        display: grid;
+        column-gap: 10px;
+        font-size: 15px;
+        line-height: 39px;
+    }
+    
+    .titleContainer {
+        grid-template-columns: 50px repeat(3, 180px);
+    }
+    
+    .innerContainer {
+        grid-template-columns: 50px repeat(3, 180px) 50px;
+    }
+    
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranscription,
+    .tableTranslation {
+        width: 180px;
+        height: 50px;
+    }
+
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranslation,
+    .tableTranscription,
+    .tableNumberTitle,
+    .tableNumber,
+    .deleteBtn, 
+    .addBtn {
+        border-radius: 25px;
+    }
+    
+    .tableNumberTitle,
+    .tableNumber,
+    .deleteBtn,
+    .addBtn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .addBtn {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 10px;
+        justify-content: center;
+    }
+    
+    .titleContainer, 
+    .innerContainer {
+        display: grid;
+        column-gap: 10px;
+        font-size: 20px;
+        line-height: 39px;
+    }
+    
+    .titleContainer {
+        grid-template-columns: 50px repeat(3, 200px);
+    }
+    
+    .innerContainer {
+        grid-template-columns: 50px repeat(3, 200px) 50px;
+    }
+    
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranscription,
+    .tableTranslation {
+        width: 200px;
+        height: 50px;
+    }
+
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranslation,
+    .tableTranscription,
+    .tableNumberTitle,
+    .tableNumber,
+    .deleteBtn, 
+    .addBtn {
+        border-radius: 25px;
+    }
+    
+    .tableNumberTitle,
+    .tableNumber,
+    .deleteBtn,
+    .addBtn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .deleteBtn {
+        margin-left: 15px;
+    }
+    
+    .addBtn {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 13px;
+        margin-left: 86px;
+    }
+    
+    .titleContainer, 
+    .innerContainer {
+        display: grid;
+        column-gap: 57px;
+        font-size: 32px;
+        line-height: 39px;
+    }
+    
+    .titleContainer {
+        grid-template-columns: 54px repeat(3, 310px);
+    }
+    
+    .innerContainer {
+        grid-template-columns: 54px repeat(3, 310px);
+    }
+    
+    .tableWordTitle,
+    .tableTranscriptionTitle,
+    .tableTranslationTitle,
+    .tableWord,
+    .tableTranscription,
+    .tableTranslation {
+        width: 310px;
+        height: 68px;
+    }
+    
+    .tableNumberTitle,
+    .tableNumber,
+    .deleteBtn,
+    .addBtn {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .deleteBtn,
+    .addBtn {
+        &:hover {
+            width: 55px;
+            height: 55px;
+        }
+    }
+    
+    .deleteBtn {
+        font-size: 32px;
+    }
+    
+    .addBtn {
+        font-size: 32px;
+    }
+}
