@@ -9,12 +9,13 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cardBody {
-    position: relative;
-    left: 236px;
-    padding-top: 11px;
-    width: 652px;
-    height: 430px;
     border: 1px $customWhite;
     border-radius: 46px;
     background-color: $customWhite;
@@ -22,20 +23,16 @@ $boldFont: Genos;
 }
 
 .topic {
-    margin-top: 11px;
     text-align: center;
     font-family: $boldFont;
-    font-size: 36px;
     font-weight: 600;
     text-transform: uppercase;
     color: #A3B0B9;
 }
 
 .word {
-    margin-top: 82px;
     text-align: center;
     font-family: $mainFont;
-    font-size: 96px;
     font-weight: 700;
     text-transform: uppercase;
     color: #000;
@@ -43,13 +40,11 @@ $boldFont: Genos;
 
 .transcription,
 .numbers {
-    font-size: 36px;
     font-weight: 600;
     color: #000;
 }
 
 .transcription {
-    margin-top: 32px;
     text-align: center;
     font-family: $mainFont;
 }
@@ -60,8 +55,6 @@ $boldFont: Genos;
 }
 
 .numbers {
-    display: flex;
-    justify-content: center;
     margin-top: 8px;
     font-family: $boldFont;
 }
@@ -85,14 +78,164 @@ $boldFont: Genos;
     }
 
     .translation {
-        margin-top: 82px;
         text-align: center;
-        font-size: 96px;
     }
 
     .translations {
-        margin-top: 32px;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardBody {
+        padding-top: 5px;
+        width: 250px;
+        height: 180px;
+    }
+
+    .topic {
+        font-size: 15px;
+    }
+    
+    .word {
+        margin-top: 23px;
+        font-size: 35px;
+    }
+
+    .numbers {
+        font-size: 20px;
+    }
+
+    .transcription {
+        margin-top: 15px;
+        font-size: 28px;
+    }
+
+    .showTranslation {
+        .translation {
+            margin-top: 23px;
+            font-size: 35px;
+        }
+    
+        .translations {
+            margin-top: 15px;
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .cardBody {
+        padding-top: 5px;
+        width: 325px;
+        height: 220px;
+    }
+
+    .topic {
+        font-size: 18px;
+    }
+    
+    .word {
+        margin-top: 45px;
+        font-size: 38px;
+    }
+
+    .numbers {
+        font-size: 20px;
+    }
+
+    .transcription {
+        margin-top: 15px;
+        font-size: 29px;
+    }
+
+    .showTranslation {
+        .translation {
+            margin-top: 45px;
+            font-size: 38px;
+        }
+    
+        .translations {
+            margin-top: 15px;
+            font-size: 29px;
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .cardBody {
+        padding-top: 11px;
+        width: 635px;
+        height: 415px;
+    }
+
+    .topic {
+        margin-top: 11px;
         font-size: 36px;
+    }
+    
+    .word {
+        margin-top: 82px;
+        font-size: 96px;
+    }
+
+    .transcription,
+    .numbers {
+        font-size: 36px;
+    }
+
+    .transcription {
+        margin-top: 32px;
+    }
+
+    .showTranslation {
+        .translation {
+            margin-top: 82px;
+            font-size: 96px;
+        }
+    
+        .translations {
+            margin-top: 32px;
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .cardBody {
+        padding-top: 11px;
+        width: 652px;
+        height: 430px;
+    }
+
+    .topic {
+        margin-top: 11px;
+        font-size: 36px;
+    }
+    
+    .word {
+        margin-top: 82px;
+        font-size: 96px;
+    }
+
+    .transcription,
+    .numbers {
+        font-size: 36px;
+    }
+
+    .transcription {
+        margin-top: 32px;
+    }
+
+    .showTranslation {
+        .translation {
+            margin-top: 82px;
+            font-size: 96px;
+        }
+    
+        .translations {
+            margin-top: 32px;
+            font-size: 36px;
+        }
     }
 }

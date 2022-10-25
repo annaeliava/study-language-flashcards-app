@@ -10,8 +10,33 @@ $mainFont: Montserrat;
 $boldFont: Genos;
 
 .button {
-    width: 298px;
-    height: 112px;
     border-radius: 46px;
     box-shadow: none;
+}
+
+@media screen and (max-width: 480px) {
+    .button {
+        display: none;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .button {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .button {
+        width: 250px;
+        height: 112px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .button {
+        width: 298px;
+        height: 112px;
+    }
 }
