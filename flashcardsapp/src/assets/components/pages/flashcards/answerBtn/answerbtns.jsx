@@ -5,7 +5,7 @@ export default function Answer(props) {
     return (
         <>
             <button className={styles.button} style={{ backgroundColor: '#' + props.background, borderColor: '#' + props.background, }}>
-                <img className={styles.img} src={props.icon} alt='Answer' />
+                <img className={styles.img} src={props.icon} style={{ width: props.width + 'rem', height: props.height + 'rem', }} alt='Answer' />
             </button>
         </>
     );

@@ -11,13 +11,11 @@ $boldFont: Genos;
 
 .container {
     margin-top: 30px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-@media screen and (max-width: 480px) {
-    .container {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
 }

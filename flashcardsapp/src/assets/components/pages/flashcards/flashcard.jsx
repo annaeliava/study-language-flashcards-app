@@ -4,9 +4,9 @@ import Answer from './answerBtn/answerbtns.jsx';
 import styles from './Flashcard.module.scss';
 
 const answerButtons_data = [
-    { background: 'E76B6B', icon: 'img/answerBtns/no.svg' },
-    { background: '6BB3E7', icon: 'img/answerBtns/dictionary.svg' },
-    { background: '92E76B', icon: 'img/answerBtns/yes.svg' }
+    { background: 'E76B6B', icon: 'img/answerBtns/no.svg', width: '3.9375', height: '4.875' },
+    { background: '6BB3E7', icon: 'img/answerBtns/dictionary.svg', width: '3.278125', height: '3.05125' },
+    { background: '92E76B', icon: 'img/answerBtns/yes.svg', width: '3.625', height: '3.1875' }
 ]
 
 const card_data = [
@@ -19,7 +19,7 @@ export default function Flashcards() {
             <div className={styles.container}>
                 {card_data.map(card => <Card topic={card.topic} word={card.word} transcription={card.transcription} translation={card.translation} additional={card.additional} />)}
                 <div className={styles.buttonsContainer}>
-                    {answerButtons_data.map(button => <Answer background={button.background} icon={button.icon} />)}
+                    {answerButtons_data.map(button => <Answer background={button.background} icon={button.icon} width={button.width} height={button.height} />)}
                 </div>
             </div>
         </>
