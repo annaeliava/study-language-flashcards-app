@@ -10,6 +10,7 @@ $mainFont: Montserrat;
 $boldFont: Genos;
 
 .button {
+    border-width: 1px;
     border-radius: 46px;
     box-shadow: none;
 }
@@ -22,13 +23,15 @@ $boldFont: Genos;
 
 @media screen and (min-width:481px) and (max-width:768px) {
     .button {
-        width: 200px;
-        height: 100px;
+        width: 150px;
+        height: 80px;
     }
 }
 
 @media screen and (min-width:769px) and (max-width:1279px) {
     .button {
+        margin-top: 105px;
+        margin-right: 80px; 
         width: 250px;
         height: 112px;
     }
@@ -36,6 +39,8 @@ $boldFont: Genos;
 
 @media screen and (min-width:1280px) {
     .button {
+        margin-top: 105px;
+        margin-right: 80px; 
         width: 298px;
         height: 112px;
     }

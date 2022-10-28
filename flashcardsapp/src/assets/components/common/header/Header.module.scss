@@ -9,7 +9,7 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
-@media only screen and (min-width: 0) and (max-width: 900px) {
+@media only screen and (min-width:0) and (max-width: 300px) {
     .mainContainer {
         display: none;
     }
@@ -17,13 +17,39 @@ $boldFont: Genos;
     .headerMUI {
         width: 100%;
     }
+
+    .myaccountMUI {
+        display: none;
+    }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1279px) {
+@media only screen and (min-width: 301px) and (max-width: 900px) {
+    .mainContainer {
+        display: none;
+    }
+
+    .headerMUI {
+        width: 100%;
+    }
+
+    .myaccountMUI {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1028px) {
     .mainContainer {
         position: sticky;
         top: 0;
         background-color: $bodyColor;
+    }
+
+    .navContainer {
+        position: relative;
+        top: 16px;
+        left: 70%;
+        width: 205px;
+        height: 61px;
     }
     
     .title, 
@@ -37,12 +63,13 @@ $boldFont: Genos;
     .title {
         position: absolute;
         top: 25px;
-        left: 49px;
+        left: 70px;
     }
     
     .currentLanguage {
-        margin-top: 25px;
-        margin-left: 600px;
+        position: absolute;
+        top: 9px;
+        left: 0;
         cursor: pointer;
         &:hover {
             font-size: 37px;
@@ -51,8 +78,9 @@ $boldFont: Genos;
     }
     
     .homeBtn {
-        margin-top: 30px;
-        margin-left: 10px;
+        position: absolute;
+        top: 14px;
+        left: 61px;
         width: 44px;
         height: 33px;
         cursor: pointer;
@@ -64,8 +92,87 @@ $boldFont: Genos;
     }
     
     .myaccount {
-        margin-top: 16px;
-        margin-left: 10px;
+        position: absolute;
+        top: 0;
+        left: 139px;
+        width: 66px;
+        height: 61px;
+        cursor: pointer;
+        &:hover {
+            width: 67px;
+            height: 62px;
+        }
+    }
+    
+    .headerLine {
+        position:absolute;
+        top: 89px;
+        left: 27px;
+        width: 92%;
+        height: 0;
+        border: 1px solid #5C88FF;
+        background-color: $bodyColor;
+    }
+}
+
+@media only screen and (min-width: 1028px) and (max-width: 1279px) {
+    .mainContainer {
+        position: sticky;
+        top: 0;
+        background-color: $bodyColor;
+    }
+
+    .navContainer {
+        position: relative;
+        top: 16px;
+        left: 70%;
+        width: 205px;
+        height: 61px;
+    }
+    
+    .title, 
+    .currentLanguage {
+        font-family: $boldFont;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+    
+    .title {
+        position: absolute;
+        top: 25px;
+        left: 10%;
+    }
+    
+    .currentLanguage {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        cursor: pointer;
+        &:hover {
+            font-size: 37px;
+            color: $hoverColor;
+        }
+    }
+    
+    .homeBtn {
+        position: absolute;
+        top: 14px;
+        left: 61px;
+        width: 44px;
+        height: 33px;
+        cursor: pointer;
+        &:hover {
+            width: 45px;
+            height: 34px;
+            color: $hoverColor;
+        }
+    }
+    
+    .myaccount {
+        position: absolute;
+        top: 0;
+        left: 139px;
         width: 66px;
         height: 61px;
         cursor: pointer;
@@ -92,6 +199,14 @@ $boldFont: Genos;
         top: 0;
         background-color: $bodyColor;
     }
+
+    .navContainer {
+        position: relative;
+        top: 16px;
+        left: 70%;
+        width: 205px;
+        height: 61px;
+    }
     
     .title, 
     .currentLanguage {
@@ -104,13 +219,13 @@ $boldFont: Genos;
     .title {
         position: absolute;
         top: 25px;
-        left: 49px;
+        left: 10%;
     }
     
     .currentLanguage {
         position: absolute;
-        top: 25px;
-        left: 1206px;
+        top: 9px;
+        left: 0;
         cursor: pointer;
         &:hover {
             font-size: 37px;
@@ -120,8 +235,8 @@ $boldFont: Genos;
     
     .homeBtn {
         position: absolute;
-        top: 30px;
-        left: 1267px;
+        top: 14px;
+        left: 61px;
         width: 44px;
         height: 33px;
         cursor: pointer;
@@ -131,11 +246,11 @@ $boldFont: Genos;
             color: $hoverColor;
         }
     }
-    
+
     .myaccount {
         position: absolute;
-        top: 16px;
-        left: 1345px;
+        top: 0;
+        left: 139px;
         width: 66px;
         height: 61px;
         cursor: pointer;

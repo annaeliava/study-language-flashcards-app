@@ -18,8 +18,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "@fontsource/genos/700.css";
-//import { ReactComponent as HomeImg } from './header_home-icon.svg';
-//import { ReactComponent as User } from "./userpic.svg";
 import styles from './Header.module.scss';
 import 'normalize.css';
 
@@ -78,16 +76,25 @@ export default function Header() {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography component="div"
+              <IconButton>
+                <Typography component="div"
+                  sx={{
+                    flexGrow: 1,
+                    fontFamily: 'Genos',
+                    fontSize: 32,
+                    fontWeight: 700,
+                    color: 'details.blue',
+                  }}>
+                  IKNOWTHIS
+                </Typography>
+              </IconButton>
+              <IconButton
                 sx={{
-                  flexGrow: 1,
-                  fontFamily: 'Genos',
-                  fontSize: 32,
-                  fontWeight: 700,
-                  color: 'details.blue',
+                  display: { xs: 'none', sm: 'block', },
+                  marginLeft: 45,
                 }}>
-                IKNOWTHIS
-              </Typography>
+                <img className={styles.myaccountMUI} src='img/userpic.svg' alt='My account' />
+              </IconButton>
             </Toolbar>
           </AppBar>
           <Drawer
@@ -110,7 +117,7 @@ export default function Header() {
             </DrawerHeader>
             <Divider />
             <List>
-              {['Home', 'Dictionary', 'Flashcards', 'Language'].map((text) => (
+              {['Home', 'Dictionary', 'Flashcards', 'Language', 'My Account'].map((text) => (
                 <ListItem key={text} disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
@@ -127,9 +134,11 @@ export default function Header() {
       <div className={styles.mainContainer}>
         <div className={styles.container}>
           <div className={styles.title}>IKNOWTHIS</div>
-          <div className={styles.currentLanguage}>EN</div>
-          {/*<HomeImg className={styles.homeBtn} />
-          <User className={styles.myaccount} />*/}
+          <div className={styles.navContainer}>
+            <div className={styles.currentLanguage}>EN</div>
+            <img className={styles.homeBtn} src='img/header_home-icon.svg' alt='Home' />
+            <img className={styles.myaccount} src='img/userpic.svg' alt='My account' />
+          </div>
         </div>
         <div className={styles.headerLine}></div>
       </div>
