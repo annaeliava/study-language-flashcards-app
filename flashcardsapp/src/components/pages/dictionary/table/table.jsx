@@ -3,6 +3,7 @@ import styles from './table.module.scss';
 import 'normalize.css';
 
 export default function Table(props) {
+    const { data } = props;
     return (
         <>
             <div className={styles.mainContainer}>
@@ -13,10 +14,10 @@ export default function Table(props) {
                     <div className={styles.tableTranslationTitle}>translation</div>
                 </div>
                 <div className={styles.innerContainer}>
-                    <div className={styles.tableNumber}>{props.number}</div>
-                    <div className={styles.tableWord}>{props.word}</div>
-                    <div className={styles.tableTranscription}>{props.transcription}</div>
-                    <div className={styles.tableTranslation}>{props.translation}</div>
+                    <div className={styles.tableNumber}>{data.number}</div>
+                    <div className={styles.tableWord}>{data.word}</div>
+                    <div className={styles.tableTranscription}>{data.transcription}</div>
+                    <div className={styles.tableTranslation}>{data.translation}</div>
                     <button className={styles.deleteBtn}>X</button>
                 </div>
                 <div className={styles.btnContainer}>

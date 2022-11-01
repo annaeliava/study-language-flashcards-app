@@ -9,6 +9,7 @@ Card.defaultProps = {
 };
 
 export default function Card(props) {
+    const { data } = props;
     const [pressed, setPressed] = useState(false);
 
     const handleChange = () => {
@@ -18,11 +19,11 @@ export default function Card(props) {
         <>
             <div className={`${styles.container} ${pressed ? styles.showTranslation : ''}`} onClick={handleChange}>
                 <div className={styles.cardBody}>
-                    <div className={styles.topic}>{props.topic}</div>
-                    <div className={styles.word}>{props.word}</div>
-                    <div className={styles.transcription}>{props.transcription}</div>
-                    <div className={styles.translation}>{props.translation}</div>
-                    <div className={styles.translations}>{props.additional}</div>
+                    <div className={styles.topic}>{data.topic}</div>
+                    <div className={styles.word}>{data.word}</div>
+                    <div className={styles.transcription}>{data.transcription}</div>
+                    <div className={styles.translation}>{data.translation}</div>
+                    <div className={styles.translations}>{data.additional}</div>
                 </div>
                 <div className={styles.numbers}>1/150</div>
             </div>

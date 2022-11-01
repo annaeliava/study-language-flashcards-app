@@ -1,7 +1,7 @@
 import './assets/styles/app.scss';
-import Header from './assets/components/common/header/Header';
-import Footer from './assets/components/common/footer/Footer';
-import Flashcards from './assets/components/pages/flashcards/flashcard.jsx';
+import Header from './components/common/header/Header';
+import Footer from './components/common/footer/Footer';
+import Flashcards from './components/pages/flashcards/flashcard';
 
 function App() {
   return (

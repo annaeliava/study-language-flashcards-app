@@ -12,7 +12,7 @@ export default function Dictionary() {
         <>
             <div className="container">
                 <div className={styles.title}>dictionary</div>
-                {vocabulary.map(word => < Table number={word.number} word={word.word} transcription={word.transcription} translation={word.translation} />)}
+                {vocabulary.map(word => < Table data={word} />)}
             </div>
         </>
     );

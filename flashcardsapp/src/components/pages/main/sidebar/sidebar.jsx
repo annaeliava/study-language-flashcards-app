@@ -1,11 +1,12 @@
 import React from 'react';
 
 function Sidebar(props) {
+    const { data } = props;
     return (
         <>
             <div className='container'>
-                <img src="{props.pic}" alt="sidebar" className='pic' />
-                <div className='title'>{props.sidebar}</div>
+                <img src="{data.pic}" alt="sidebar" className='pic' />
+                <div className='title'>{data.sidebar}</div>
             </div>
         </>
     );

@@ -17,9 +17,9 @@ export default function Flashcards() {
     return (
         <>
             <div className={styles.container}>
-                {card_data.map(card => <Card topic={card.topic} word={card.word} transcription={card.transcription} translation={card.translation} additional={card.additional} />)}
+                {card_data.map(card => <Card data={card} />)}
                 <div className={styles.buttonsContainer}>
-                    {answerButtons_data.map(button => <Answer background={button.background} icon={button.icon} width={button.width} height={button.height} />)}
+                    {answerButtons_data.map(button => <Answer data={button} />)}
                 </div>
             </div>
         </>
