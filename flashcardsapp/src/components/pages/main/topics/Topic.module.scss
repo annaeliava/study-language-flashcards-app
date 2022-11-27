@@ -9,12 +9,39 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+@media screen and (max-width: 480px) {}
+
+@media screen and (min-width:481px) and (max-width:768px) {}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .container {
+        margin-left: 89px;
+        padding-top: 39px;
+        padding-left: 53px;
+        padding-right: 53px;
+        width: 600px;
+        height: 125px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .container {
+        margin-left: 89px;
+        padding-top: 39px;
+        padding-left: 53px;
+        padding-right: 53px;
+        width: 600px;
+        height: 130px;
+    }
+
+    .topic,
+    .quantity {
+        font-size: 36px;
+        font-weight: 700;
+    }
+}
+
 .container {
-    padding-top: 39px;
-    padding-left: 53px;
-    padding-right: 53px;
-    width: 817px;
-    height: 130px;
     border: 1px $customWhite;
     background-color: $customWhite;
 }

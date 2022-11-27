@@ -3,16 +3,16 @@ import Topic from '../main/topics/topic.jsx';
 import Sidebar from './sidebar/sidebar.jsx';
 
 const topics_data = [
-    { topic: 'basic', quantity: '150' },
-    { topic: 'verbs', quantity: '50' },
-    { topic: 'food', quantity: '48' },
-    { topic: 'clothes', quantity: '48' }
+    { topic: 'basic', quantity: '41', linkToTopic: 'basic' },
+    { topic: 'verbs', quantity: '50', linkToTopic: 'verbs' },
+    { topic: 'food', quantity: '48', linkToTopic: 'food' },
+    { topic: 'clothes', quantity: '48', linkToTopic: 'clothes' }
 ];
 
 const sidebar_data = [
-    { pic: '/flashcardsapp/src/assets/pics/sidebar/sidebar_yourflashcards-icon.svg', sidebar: 'your flashcards' },
-    { pic: '/flashcardsapp/src/assets/pics/sidebar/sidebar_history-icon.svg', sidebar: 'history' },
-    { pic: '/flashcardsapp/src/assets/pics/sidebar/sidebar_dictionary-icon.svg', sidebar: 'dictionary' }
+    { pic: 'img/sidebar_yourflashcards-icon.svg', sidebar: 'your flashcards' },
+    { pic: 'img/sidebar_history-icon.svg', sidebar: 'history' },
+    { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'dictionary' }
 ]
 
 function Main() {

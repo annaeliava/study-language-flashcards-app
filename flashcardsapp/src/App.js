@@ -1,15 +1,30 @@
 import './assets/styles/app.scss';
 import Header from './components/common/header/Header';
 import Footer from './components/common/footer/Footer';
-import Flashcards from './components/pages/flashcards/flashcard';
+import Main from './components/pages/main/main';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <Flashcards />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Header />
+        <main>
+          <Routes>
+            <Route path='/users' />
+            <Route exact path='/' element={<Main />} />
+            <Route>
+              Error
+            </Route>
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

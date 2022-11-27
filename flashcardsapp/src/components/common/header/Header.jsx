@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Box,
@@ -41,7 +42,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end',
 }));
@@ -131,17 +131,21 @@ export default function Header() {
           </Drawer>
         </Box>
       </ThemeProvider>
-      <div className={styles.mainContainer}>
+      <header className={styles.mainContainer}>
         <div className={styles.container}>
           <div className={styles.title}>IKNOWTHIS</div>
-          <div className={styles.navContainer}>
+          <nav className={styles.navContainer}>
             <div className={styles.currentLanguage}>EN</div>
-            <img className={styles.homeBtn} src='img/header_home-icon.svg' alt='Home' />
-            <img className={styles.myaccount} src='img/userpic.svg' alt='My account' />
-          </div>
+            <Link to='/'>
+              <img className={styles.homeBtn} src='img/header_home-icon.svg' alt='Home' />
+            </Link>
+            <Link to='/users'>
+              <img className={styles.myaccount} src='img/userpic.svg' alt='My account' />
+            </Link>
+          </nav>
         </div>
         <div className={styles.headerLine}></div>
-      </div>
+      </header>
     </>
   );
 }

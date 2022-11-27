@@ -5,7 +5,7 @@ function Sidebar(props) {
     return (
         <>
             <div className='container'>
-                <img src="{data.pic}" alt="sidebar" className='pic' />
+                <img src={data.pic} alt="sidebar" className='pic' />
                 <div className='title'>{data.sidebar}</div>
             </div>
         </>
