@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from './card/card';
-import Answer from './answerBtn/answerbtns.jsx';
+import Card from './card/Card';
+import Answer from './answerBtn/Answerbtns.jsx';
 import styles from './Flashcard.module.scss';
 
 const answerButtons_data = [

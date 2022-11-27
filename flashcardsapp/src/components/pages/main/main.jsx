@@ -1,6 +1,6 @@
 import React from 'react';
-import Topic from '../main/topics/topic.jsx';
-import Sidebar from './sidebar/sidebar.jsx';
+import Topic from './topics/Topic.jsx';
+import Sidebar from './sidebar/Sidebar.jsx';
 
 const topics_data = [
     { topic: 'basic', quantity: '41', linkToTopic: 'basic' },

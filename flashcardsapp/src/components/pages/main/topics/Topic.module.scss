@@ -9,6 +9,23 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+.container {
+    border: 1px $customWhite;
+    background-color: $customWhite;
+}
+
+.topic,
+.quantity {
+    font-family: $mainFont;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+}
+
+.topic {
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 480px) {}
 
 @media screen and (min-width:481px) and (max-width:768px) {}
@@ -19,8 +36,8 @@ $boldFont: Genos;
         padding-top: 39px;
         padding-left: 53px;
         padding-right: 53px;
-        width: 600px;
-        height: 125px;
+        width: 500px;
+        height: 110px;
     }
 }
 
@@ -39,21 +56,4 @@ $boldFont: Genos;
         font-size: 36px;
         font-weight: 700;
     }
-}
-
-.container {
-    border: 1px $customWhite;
-    background-color: $customWhite;
-}
-
-.topic,
-.quantity {
-    font-family: $mainFont;
-    font-size: 36px;
-    font-weight: 700;
-    color: #000;
-}
-
-.topic {
-    text-transform: uppercase;
 }

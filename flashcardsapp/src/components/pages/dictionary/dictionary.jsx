@@ -1,6 +1,6 @@
 import React from 'react';
-import Table from './table/table.jsx';
-import styles from './dictionary.module.scss';
+import Table from './table/Table.jsx';
+import styles from './Dictionary.module.scss';
 import 'normalize.css';
 
 const vocabulary = [
