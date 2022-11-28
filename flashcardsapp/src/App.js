@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom';
 import Flashcards from './components/pages/flashcards/Flashcard';
 import Dictionary from './components/pages/dictionary/Dictionary';
-import Error from './components/pages/error/error';
+import Error from './components/pages/error/Error';
 
 function App() {
   return (
