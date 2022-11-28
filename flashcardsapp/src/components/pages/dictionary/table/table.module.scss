@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
+$mainFont: Montserrat;
+$boldFont: Genos;
 $bodyColor: #E0F0FA;
 $customBlue: #6BB3E7;
 $customWhite: #F5F5F5;
 $customGray: #C7D1D8;
 $customRed: #E76B6B;
+$customGreen: #8cc152;
 $hoverColor: #5C88FF;
-$mainFont: Montserrat;
-$boldFont: Genos;
 
 .titleContainer, 
-.innerContainer {
+.innerContainer,
+.newWordContainer {
     font-family: $mainFont;
     font-weight: 700;
     line-height: 39px;
@@ -21,6 +23,10 @@ $boldFont: Genos;
     text-transform: uppercase;
 }
 
+.newWordContainer {
+    margin-top: 20px;
+}
+
 .tableNumberTitle, 
 .tableWordTitle,
 .tableTranscriptionTitle,
@@ -29,7 +35,8 @@ $boldFont: Genos;
 .tableWord,
 .tableTranscription,
 .tableTranslation,
-.addBtn {
+.addBtn,
+.saveBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,13 +49,15 @@ $boldFont: Genos;
 .tableTranscriptionTitle,
 .tableTranslationTitle,
 .tableNumber,
-.addBtn {
+.addBtn,
+.saveBtn {
     border: 2px solid $customBlue;
 }
 
 .tableWord,
 .tableTranscription,
 .tableTranslation {
+    padding-left: 35px;
     border: 2px solid $customGray;
     cursor: pointer;
     &:hover {
@@ -57,7 +66,8 @@ $boldFont: Genos;
 }
 
 .deleteBtn,
-.addBtn {
+.addBtn,
+.saveBtn {
     cursor: pointer;
 }
 
@@ -73,13 +83,24 @@ $boldFont: Genos;
     }
 }
 
-.addBtn {
+.addBtn,
+.saveBtn {
     font-family: $mainFont;
     font-weight: 700;
     color: $customBlue;
+}
+
+.addBtn {
     &:hover {
         border: 2px solid $customRed;
         color: $customRed;
+    }
+}
+
+.saveBtn {
+    &:hover {
+        border: 2px solid $customGreen;
+        color: $customGreen;
     }
 }
 
@@ -96,29 +117,25 @@ $boldFont: Genos;
     }
     
     .titleContainer, 
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         display: grid;
         column-gap: 8px;
         font-size: 12px;
         line-height: 39px;
     }
     
-    .titleContainer {
-        grid-template-columns: repeat(3, 105px);
-    }
-    
-    .innerContainer {
+    .titleContainer,
+    .innerContainer,
+    .newWordContainer {
         grid-template-columns: repeat(3, 105px);
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
-    .tableTranslationTitle,
-    .tableWord,
-    .tableTranscription,
-    .tableTranslation {
+    .tableTranslationTitle {
         width: 105px;
-        height: 50px;
+        height: 36px;
     }
 
     .tableWordTitle,
@@ -130,7 +147,8 @@ $boldFont: Genos;
         border-radius: 10px;
     }
     
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         width: 20px;
         height: 20px;
     }
@@ -141,7 +159,8 @@ $boldFont: Genos;
         display: none
     }
     
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         font-size: 12px;
     }
 }
@@ -154,7 +173,8 @@ $boldFont: Genos;
     }
     
     .titleContainer, 
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         display: grid;
         column-gap: 10px;
         font-size: 15px;
@@ -165,16 +185,14 @@ $boldFont: Genos;
         grid-template-columns: 50px repeat(3, 180px);
     }
     
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         grid-template-columns: 50px repeat(3, 180px) 50px;
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
-    .tableTranslationTitle,
-    .tableWord,
-    .tableTranscription,
-    .tableTranslation {
+    .tableTranslationTitle {
         width: 180px;
         height: 50px;
     }
@@ -195,12 +213,14 @@ $boldFont: Genos;
     .tableNumberTitle,
     .tableNumber,
     .deleteBtn,
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         width: 50px;
         height: 50px;
     }
     
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         font-size: 12px;
     }
 }
@@ -213,7 +233,8 @@ $boldFont: Genos;
     }
     
     .titleContainer, 
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         display: grid;
         column-gap: 10px;
         font-size: 20px;
@@ -224,16 +245,14 @@ $boldFont: Genos;
         grid-template-columns: 50px repeat(3, 200px);
     }
     
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         grid-template-columns: 50px repeat(3, 200px) 50px;
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
-    .tableTranslationTitle,
-    .tableWord,
-    .tableTranscription,
-    .tableTranslation {
+    .tableTranslationTitle {
         width: 200px;
         height: 50px;
     }
@@ -247,14 +266,16 @@ $boldFont: Genos;
     .tableNumberTitle,
     .tableNumber,
     .deleteBtn, 
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         border-radius: 25px;
     }
     
     .tableNumberTitle,
     .tableNumber,
     .deleteBtn,
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         width: 50px;
         height: 50px;
     }
@@ -263,7 +284,8 @@ $boldFont: Genos;
         margin-left: 15px;
     }
     
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         font-size: 20px;
     }
 }
@@ -276,7 +298,8 @@ $boldFont: Genos;
     }
     
     .titleContainer, 
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         display: grid;
         column-gap: 57px;
         font-size: 32px;
@@ -287,16 +310,14 @@ $boldFont: Genos;
         grid-template-columns: 54px repeat(3, 310px);
     }
     
-    .innerContainer {
+    .innerContainer,
+    .newWordContainer {
         grid-template-columns: 54px repeat(3, 310px);
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
-    .tableTranslationTitle,
-    .tableWord,
-    .tableTranscription,
-    .tableTranslation {
+    .tableTranslationTitle {
         width: 310px;
         height: 68px;
     }
@@ -304,13 +325,15 @@ $boldFont: Genos;
     .tableNumberTitle,
     .tableNumber,
     .deleteBtn,
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         width: 54px;
         height: 54px;
     }
     
     .deleteBtn,
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         &:hover {
             width: 55px;
             height: 55px;
@@ -321,7 +344,8 @@ $boldFont: Genos;
         font-size: 32px;
     }
     
-    .addBtn {
+    .addBtn,
+    .saveBtn {
         font-size: 32px;
     }
 }
