@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+$bodyColor: #E0F0FA;
+$customBlue: #6BB3E7;
+$customWhite: #F5F5F5;
+$customGray: #C7D1D8;
+$customRed: #E76B6B;
+$hoverColor: #5C88FF;
+$mainFont: Montserrat;
+$boldFont: Genos;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errorTitle {
+    margin-bottom: 50px;
+    font-family: $boldFont;
+    font-weight: bolder;
+    font-size: 36px;
+    color: black;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    border: 2px solid $customBlue;
+    border-radius: 27px;
+    font-family: $boldFont;
+    font-size: 27px;
+    cursor: pointer;
+    &:hover {
+        width: 155px;
+        height: 55px;
+        font-size: 30px;
+        background-color: $bodyColor;
+        color: $customBlue;
+    }
+}
