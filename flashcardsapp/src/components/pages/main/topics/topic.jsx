@@ -6,7 +6,7 @@ function Topic(props) {
     const { data } = props;
     return (
         <>
-            <Link to='/{data.linkToTopic}' style={{ textDecoration: 'none' }}>
+            <Link to={data.linkToTopic} style={{ textDecoration: 'none' }}>
                 <div className={styles.container}>
                     <div className={styles.topic}>{data.topic}</div>
                     <div className={styles.quantity}>{data.quantity} words</div>

@@ -7,3 +7,24 @@ $customGray: #C7D1D8;
 $customRed: #E76B6B;
 $mainFont: Montserrat;
 $boldFont: Genos;
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'topic sidebar'
+    'topic sidebar';
+}
+
+.topicContainer {
+    grid-area: topic;
+    margin-right: 10px;
+}
+
+.sidebarContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-area: sidebar;
+    width: 250px;
+    height: 300px;
+}

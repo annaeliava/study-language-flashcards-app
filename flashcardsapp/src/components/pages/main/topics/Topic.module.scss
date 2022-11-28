@@ -10,6 +10,8 @@ $mainFont: Montserrat;
 $boldFont: Genos;
 
 .container {
+    display: flex;
+    justify-content: space-between;
     border: 1px $customWhite;
     background-color: $customWhite;
 }
@@ -26,29 +28,67 @@ $boldFont: Genos;
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px) {}
-
-@media screen and (min-width:481px) and (max-width:768px) {}
-
-@media screen and (min-width:769px) and (max-width:1279px) {
+@media screen and (max-width: 480px) {
     .container {
-        margin-left: 89px;
+        margin-bottom: 48px;
+        padding-top: 39px;
+        padding-left: 53px;
+        padding-right: 53px;
+        width: 200px;
+        height: 80px;
+    }
+
+    .topic,
+    .quantity {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .container {
+        margin-bottom: 48px;
         padding-top: 39px;
         padding-left: 53px;
         padding-right: 53px;
         width: 500px;
         height: 110px;
     }
+
+    .topic,
+    .quantity {
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .container {
+        margin-left: 89px;
+        margin-bottom: 48px;
+        padding-top: 39px;
+        padding-left: 53px;
+        padding-right: 53px;
+        width: 500px;
+        height: 110px;
+    }
+
+    .topic,
+    .quantity {
+        font-size: 36px;
+        font-weight: 700;
+    }
 }
 
 @media screen and (min-width:1280px) {
     .container {
         margin-left: 89px;
-        padding-top: 39px;
+        margin-bottom: 48px;
+        padding-top: 40px;
         padding-left: 53px;
         padding-right: 53px;
         width: 600px;
-        height: 130px;
+        height: 100px;
     }
 
     .topic,

@@ -9,3 +9,20 @@ $hoverColor: #5C88FF;
 $mainFont: Montserrat;
 $boldFont: Genos;
 
+.container {
+    width: 100px;
+    height: 100px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: $mainFont;
+    font-size: 20px;
+    color: black;
+}

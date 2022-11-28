@@ -4,6 +4,10 @@ body {
     background-color: $bodyColor;
 }
 
+main {
+    margin-top: 45px;
+}
+
 .App {
     display: grid;
     grid-template-rows: 89px minmax(823px, auto) 84px;
