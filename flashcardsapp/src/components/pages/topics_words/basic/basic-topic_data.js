@@ -1,5 +1,5 @@
 export const basic_data = [
-    {id:'1', english:'people', russian:'люди, народ', transcription:' /ˈpiːpl/', topic:'basic'},
+    {id:'1', english:'people', russian:'люди, народ', transcription:'/ˈpiːpl/', topic:'basic'},
     {id:'2', english:'thing', russian:'вещь, дело', transcription:'/θɪŋ/', topic:'basic'},
     {id:'3', english:'time', russian:'время', transcription:'/taɪm/', topic:'basic'},
     {id:'4', english:'day', russian:'день', transcription:'/deɪ/', topic:'basic'},

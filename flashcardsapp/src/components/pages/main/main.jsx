@@ -7,7 +7,7 @@ const topics_data = [
     { topic: 'basic', quantity: '41', linkToTopic: 'basic' },
     { topic: 'verbs', quantity: '50', linkToTopic: 'verbs' },
     { topic: 'food', quantity: '48', linkToTopic: 'food' },
-    { topic: 'clothes', quantity: '48', linkToTopic: 'clothes' }
+    { topic: 'clothes', quantity: '46', linkToTopic: 'clothes' }
 ];
 
 const sidebar_data = [
