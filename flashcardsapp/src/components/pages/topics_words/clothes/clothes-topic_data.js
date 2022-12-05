@@ -1,4 +1,4 @@
-export const clothes_data = [
+const clothes_data = [
     {id:'1', english:'t-shirt', russian:'футболка', transcription:'/ˈtiːʃɜːt/', topic:'clothes'},
     {id:'2', english:'sweater', russian:'свитер, пуловер', transcription:'/ˈswetər/', topic:'clothes'},
     {id:'3', english:'jacket', russian:'куртка, жакет, пиджак', transcription:'/ˈdʒækɪt/', topic:'clothes'},
@@ -46,3 +46,5 @@ export const clothes_data = [
     {id:'45', english:'trousers', russian:'брюки', transcription:'/ˈtraʊ.zəz/', topic:'clothes'},
     {id:'46', english:'jumper', russian:'джемпер, толстовка', transcription:'/ˈdʒʌm.pər/', topic:'clothes'},
 ];
+
+export default clothes_data;

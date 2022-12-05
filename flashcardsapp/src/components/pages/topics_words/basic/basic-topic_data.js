@@ -1,4 +1,4 @@
-export const basic_data = [
+const basic_data = [
     {id:'1', english:'people', russian:'люди, народ', transcription:'/ˈpiːpl/', topic:'basic'},
     {id:'2', english:'thing', russian:'вещь, дело', transcription:'/θɪŋ/', topic:'basic'},
     {id:'3', english:'time', russian:'время', transcription:'/taɪm/', topic:'basic'},
@@ -40,3 +40,5 @@ export const basic_data = [
     {id:'40', english:'brother', russian:'брат', transcription:'/ˈbrʌðər/', topic:'basic'},
     {id:'41', english:'young', russian:'молодой', transcription:'/jʌŋ/', topic:'basic'},
 ]; 
+
+export default basic_data;
