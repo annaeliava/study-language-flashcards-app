@@ -1,0 +1,52 @@
+@import '../../../assets/styles/variables.scss';
+
+.title{
+    display: flex;
+    justify-content: center ;
+    margin-top: 34px;
+    margin-bottom: 34px;
+    text-transform: uppercase;
+    font-family: $mainFont;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: $customBlue;
+}
+
+@media screen and (max-width: 480px)  {
+    .title {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .mainContainer {
+        display: grid;
+        row-gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .mainContainer {
+        display: grid;
+        row-gap: 13px;
+        margin-left: 86px;
+    }
+}
