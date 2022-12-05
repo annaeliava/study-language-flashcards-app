@@ -5,8 +5,8 @@ import styles from './Main.module.scss';
 
 const topics_data = [
     { topic: 'basic', quantity: '41', linkToTopic: 'basic' },
-    { topic: 'verbs', quantity: '50', linkToTopic: 'verbs' },
-    { topic: 'food', quantity: '48', linkToTopic: 'food' },
+    { topic: 'verbs', quantity: '16', linkToTopic: 'verbs' },
+    { topic: 'food', quantity: '63', linkToTopic: 'food' },
     { topic: 'clothes', quantity: '46', linkToTopic: 'clothes' }
 ];
 
