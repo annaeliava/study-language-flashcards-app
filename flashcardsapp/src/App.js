@@ -1,15 +1,19 @@
 import './assets/styles/app.scss';
-import Header from './components/common/header/Header';
-import Footer from './components/common/footer/Footer';
-import Main from './components/pages/main/Main';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
+import Header from './components/common/header/Header';
+import Footer from './components/common/footer/Footer';
 import Flashcards from './components/pages/flashcards/Flashcard';
 import Dictionary from './components/pages/dictionary/Dictionary';
+import Main from './components/pages/main/Main';
 import Error from './components/pages/error/Error';
+import Basic from './components/pages/topics_words/basic/Basic';
+import Verbs from './components/pages/topics_words/verbs/Verbs';
+import Food from './components/pages/topics_words/food/Food';
+import Clothes from './components/pages/topics_words/clothes/Clothes';
 
 function App() {
   return (
@@ -19,10 +23,14 @@ function App() {
         <main>
           <Routes>
             <Route path='/users' />
+            <Route path='/basic' element={<Basic />} />
+            <Route path='/verbs' element={<Verbs />} />
+            <Route path='/food' element={<Food />} />
+            <Route path='/clothes' element={<Clothes />} />
             <Route path='/game' element={<Flashcards />} />
             <Route path='/dictionary' element={<Dictionary />} />
             <Route exact path='/' element={<Main />} />
-            <Route path='*' element={<Error/>} />
+            <Route path='*' element={<Error />} />
           </Routes>
         </main>
         <Footer />
