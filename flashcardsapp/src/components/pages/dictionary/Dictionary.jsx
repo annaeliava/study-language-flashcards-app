@@ -8,7 +8,7 @@ import Add from '../../common/table/addBtn/addBtn';
 
 
 const vocabulary = [
-    { number: '1', word: 'finger', transcription: '[ˈfɪŋɡə]', translation: 'палец' }
+    { id: 1, english: 'finger', transcription: '[ˈfɪŋɡə]', russian: 'палец' }
 ];
 
 export default function Dictionary() {
