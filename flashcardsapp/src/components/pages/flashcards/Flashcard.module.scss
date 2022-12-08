@@ -4,7 +4,29 @@
     margin-left: 10px;
 }
 
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .buttonsContainer {
     display: flex;
     justify-content: center;
+}
+
+.prevBtn,
+.nextBtn {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prevBtn {
+    margin-right: 5%;
+}
+
+.nextBtn {
+    margin-left: 5%;
 }
