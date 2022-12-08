@@ -11,7 +11,7 @@ const topics_data = [
 ];
 
 const sidebar_data = [
-    { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'your flashcards', linkTo: 'game' },
+    { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'flashcards', linkTo: 'game' },
     { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'dictionary', linkTo: 'dictionary' }
 ]
 

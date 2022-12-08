@@ -7,7 +7,7 @@ export default function Error() {
         <>
             <div className={styles.container}>
                 <div className={styles.errorTitle}>Страница не найдена</div>
-                <Link to='/' style={{ textDecoration: 'nonr' }}>
+                <Link to='/' className={styles.links}>
                     <div className={styles.btnContainer}>
                         <button className={styles.button}>HOME</button>
                     </div>

@@ -1,20 +1,96 @@
-.container {
-    display: grid;
-    grid-template-areas: 
-    'topic sidebar'
-    'topic sidebar';
+@media only screen and (min-width:0) and (max-width: 300px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'topic'
+        'topic';
+    }
+    
+    .topicContainer {
+        grid-area: topic;
+        margin-right: 10px;
+    }
 }
 
-.topicContainer {
-    grid-area: topic;
-    margin-right: 10px;
+@media only screen and (min-width: 301px) and (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'topic'
+        'topic';
+    }
+    
+    .topicContainer {
+        grid-area: topic;
+        margin-right: 10px;
+    }
 }
 
-.sidebarContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    grid-area: sidebar;
-    width: 250px;
-    height: 300px;
+@media only screen and (min-width: 901px) and (max-width: 1028px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'topic sidebar'
+        'topic sidebar';
+    }
+    
+    .topicContainer {
+        grid-area: topic;
+        margin-right: 10px;
+    }
+    
+    .sidebarContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        grid-area: sidebar;
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 1028px) and (max-width: 1279px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'topic sidebar'
+        'topic sidebar';
+    }
+    
+    .topicContainer {
+        grid-area: topic;
+        margin-right: 10px;
+    }
+    
+    .sidebarContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        grid-area: sidebar;
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'topic sidebar'
+        'topic sidebar';
+    }
+    
+    .topicContainer {
+        grid-area: topic;
+        margin-right: 10px;
+    }
+    
+    .sidebarContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        grid-area: sidebar;
+        width: 250px;
+        height: 300px;
+    }
 }
