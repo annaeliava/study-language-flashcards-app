@@ -22,7 +22,6 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path='/users' />
             <Route path='/basic' element={<Basic />} />
             <Route path='/verbs' element={<Verbs />} />
             <Route path='/food' element={<Food />} />
