@@ -1,5 +1,10 @@
 @import '../../../assets/styles/variables.scss';
 
+.links {
+    text-decoration: none;
+    color: black;
+}
+
 @media only screen and (min-width:0) and (max-width: 300px) {
     .mainContainer {
         display: none;
@@ -49,6 +54,7 @@
         font-weight: bold;
         font-size: 36px;
         line-height: 43.2px;
+        color: black;
     }
     
     .title {

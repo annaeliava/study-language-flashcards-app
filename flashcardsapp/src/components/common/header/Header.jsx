@@ -76,18 +76,20 @@ export default function Header() {
               >
                 <MenuIcon />
               </IconButton>
-              <IconButton>
-                <Typography component="div"
-                  sx={{
-                    flexGrow: 1,
-                    fontFamily: 'Genos',
-                    fontSize: 32,
-                    fontWeight: 700,
-                    color: 'details.blue',
-                  }}>
-                  IKNOWTHIS
-                </Typography>
-              </IconButton>
+              <Link to='/' className={styles.links}>
+                <IconButton>
+                  <Typography component="div"
+                    sx={{
+                      flexGrow: 1,
+                      fontFamily: 'Genos',
+                      fontSize: 32,
+                      fontWeight: 700,
+                      color: 'details.blue',
+                    }}>
+                    IKNOWTHIS
+                  </Typography>
+                </IconButton>
+              </Link>
               <IconButton
                 sx={{
                   display: { xs: 'none', sm: 'block', },
@@ -117,13 +119,15 @@ export default function Header() {
             </DrawerHeader>
             <Divider />
             <List>
-              {['Home', 'Dictionary', 'Flashcards', 'Language', 'My Account'].map((text) => (
+              {['Dictionary', 'Flashcards', 'My Account'].map((text) => (
                 <ListItem key={text} disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
                       <ChevronRightIcon />
                     </ListItemIcon>
-                    <ListItemText primary={text} />
+                    <Link to='/' className={styles.links}>
+                      <ListItemText primary={text} />
+                    </Link>
                   </ListItemButton>
                 </ListItem>
               ))}
@@ -133,13 +137,15 @@ export default function Header() {
       </ThemeProvider>
       <header className={styles.mainContainer}>
         <div className={styles.container}>
-          <div className={styles.title}>IKNOWTHIS</div>
+          <Link to='/' className={styles.links}>
+            <div className={styles.title}>IKNOWTHIS</div>
+          </Link>
           <nav className={styles.navContainer}>
             <div className={styles.currentLanguage}>EN</div>
-            <Link to='/'>
+            <Link to='/' className={styles.links}>
               <img className={styles.homeBtn} src='img/header_home-icon.svg' alt='Home' />
             </Link>
-            <Link to='/users'>
+            <Link to='/users' className={styles.links}>
               <img className={styles.myaccount} src='img/userpic.svg' alt='My account' />
             </Link>
           </nav>
