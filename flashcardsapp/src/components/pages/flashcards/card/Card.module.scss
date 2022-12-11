@@ -11,6 +11,19 @@
     border-radius: 46px;
     background-color: $customWhite;
     cursor: pointer;
+    &:hover{
+        .word,
+        .transcription,
+        .translation,
+        .translations,
+        .topic {
+            color: $customBlue;
+        }
+    }
+
+    &:active {
+        box-shadow: 0 0 0 3px $customBlue;
+    }
 }
 
 .topic {
@@ -29,8 +42,7 @@
     color: #000;
 }
 
-.transcription,
-.numbers {
+.transcription {
     font-weight: 600;
     color: #000;
 }
@@ -43,11 +55,6 @@
 .translation,
 .translations {
     display: none;
-}
-
-.numbers {
-    margin-top: 8px;
-    font-family: $boldFont;
 }
 
 .showTranslation {
@@ -93,10 +100,6 @@
         font-size: 35px;
     }
 
-    .numbers {
-        font-size: 20px;
-    }
-
     .transcription {
         margin-top: 15px;
         font-size: 28px;
@@ -129,10 +132,6 @@
     .word {
         margin-top: 45px;
         font-size: 38px;
-    }
-
-    .numbers {
-        font-size: 20px;
     }
 
     .transcription {
@@ -170,8 +169,7 @@
         font-size: 96px;
     }
 
-    .transcription,
-    .numbers {
+    .transcription {
         font-size: 36px;
     }
 
@@ -209,8 +207,7 @@
         font-size: 96px;
     }
 
-    .transcription,
-    .numbers {
+    .transcription {
         font-size: 36px;
     }
 

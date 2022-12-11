@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables.scss'; 
+
 .container {
     margin-top: 30px;
     margin-right: 10px;
@@ -21,6 +23,13 @@
     height: 25px;
     font-size: 20px;
     cursor: pointer;
+
+    &:hover {
+        color: $customBlue;
+    }
+    &:active {
+        color: $hoverColor;
+    }
 }
 
 .prevBtn {
@@ -29,4 +38,37 @@
 
 .nextBtn {
     margin-left: 5%;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    font-family: $boldFont;
+    font-weight: 600;
+    color: #000;
+}
+
+@media screen and (max-width: 480px) {
+    .numbers {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .numbers {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    .numbers {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .numbers {
+        font-size: 36px;
+    }
 }

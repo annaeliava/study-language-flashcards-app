@@ -1,30 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './card/Card';
-import Answer from './answerBtn/Answerbtns.jsx';
 import styles from './Flashcard.module.scss';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-const answerButtons_data = [
-    { background: '6BB3E7', icon: 'img/answerBtns/dictionary.svg', width: '3.278125', height: '3.05125' },
-];
-
-const card_data = [
-    { topic: 'basics', english: 'house', transcription: '/haʊs/', russian: 'дом', additional: 'здание, жилой дом' }
-];
+import basic_data from '../topics_words/basic/basic-topic_data';
 
 export default function Flashcards() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handleBack = () => {
+        const isFirstCard = currentIndex === 0
+        const newIndex = isFirstCard ? basic_data.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
+
+    const handleNext = () => {
+        const isLastCard = currentIndex === basic_data.length - 1;
+        const newIndex = isLastCard ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.cardContainer}>
-                    <div className={styles.prevBtn}><ArrowBackIcon /></div>
-                    {card_data.map(card => <Card data={card} key={card.id} />)}
-                    <div className={styles.nextBtn}><ArrowForwardIcon /></div>
+                    <div className={styles.prevBtn} onClick={handleBack}><ArrowBackIcon /></div>
+                    {basic_data.map(card => <Card data={card} key={card.id} />)[currentIndex]}
+                    <div className={styles.nextBtn} onClick={handleNext}><ArrowForwardIcon /></div>
                 </div>
-                {/*<div className={styles.buttonsContainer}>
-                    {answerButtons_data.map(button => <Answer data={button} />)}
-    </div>*/}
+                <div className={styles.numbers}>{currentIndex + 1} / {basic_data.length}</div>
             </div>
         </>
     );
