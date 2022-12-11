@@ -18,6 +18,7 @@ import { styled, useTheme, ThemeProvider, createTheme } from '@mui/material/styl
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import HomeIcon from '@mui/icons-material/Home';
 import "@fontsource/genos/700.css";
 import styles from './Header.module.scss';
 import 'normalize.css';
@@ -141,7 +142,7 @@ export default function Header() {
           <nav className={styles.navContainer}>
             <div className={styles.currentLanguage}>EN</div>
             <Link to='/' className={styles.links}>
-              <img className={styles.homeBtn} src='img/header_home-icon.svg' alt='Home' />
+              <HomeIcon sx={{ fontSize: 40 }} className={styles.homeBtn} />
             </Link>
             <Link to='/users' className={styles.links}>
               <img className={styles.myaccount} src='img/userpic.svg' alt='My account' />
