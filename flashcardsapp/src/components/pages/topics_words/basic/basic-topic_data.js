@@ -1,8 +1,8 @@
 import AddIcon from '@mui/icons-material/Add';
 
 const basic_data = [
-    {id: 1, english:'people', russian:'люди, народ', transcription:'/ˈpiːpl/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
-    {id: 2, english:'thing', russian:'вещь, дело', transcription:'/θɪŋ/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
+    {id: 1, english:'people', russian:'люди', additional:'народ', transcription:'/ˈpiːpl/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
+    {id: 2, english:'thing', russian:'вещь', additional:'дело', transcription:'/θɪŋ/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 3, english:'time', russian:'время', transcription:'/taɪm/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 4, english:'day', russian:'день', transcription:'/deɪ/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 5, english:'man', russian:'мужчина', transcription:'/mæn/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
@@ -27,7 +27,7 @@ const basic_data = [
     {id: 25, english:'winter', russian:'зима', transcription:'/ˈwɪntər', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 26, english:'spring', russian:'весна', transcription:'/sprɪŋ/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 27, english:'summer', russian:'лето', transcription:'/ˈsʌmər/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
-    {id: 28, english:'autumn/fall', russian:'осень', transcription:' /ˈɔːtəm/fɔːl/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
+    {id: 28, english:'autumn', russian:'осень', transcription:' /ˈɔːtəm/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 29, english:'furniture', russian:'мебель', transcription:'/ˈfɜːnɪtʃər/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 30, english:'pencil', russian:'карандаш', transcription:'/ˈpensəl/', topic:'basic', deleteOrAddBtn: <AddIcon/>},
     {id: 31, english:'word', russian:'слово', transcription:'/wɜːd/', topic:'basic', deleteOrAddBtn: <AddIcon/>},

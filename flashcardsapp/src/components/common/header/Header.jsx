@@ -125,9 +125,7 @@ export default function Header() {
                     <ListItemIcon>
                       <ChevronRightIcon />
                     </ListItemIcon>
-                    <Link to='/' className={styles.links}>
-                      <ListItemText primary={text} />
-                    </Link>
+                    <ListItemText primary={text} />
                   </ListItemButton>
                 </ListItem>
               ))}
