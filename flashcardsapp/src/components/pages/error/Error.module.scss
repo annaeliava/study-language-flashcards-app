@@ -6,28 +6,51 @@
     align-items: center;
 }
 
-.errorTitle {
-    margin-bottom: 50px;
+.errorTitle,
+.errorMessage {
     font-family: $boldFont;
     font-weight: bolder;
-    font-size: 36px;
     color: black;
 }
 
+.errorTitle {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.errorMessage {
+    margin-top: 10px;
+    font-size: 36px;
+}
+
+.btnContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
-    width: 150px;
-    height: 50px;
+    width: 300px;
+    height: 60px;
     border: 2px solid $customBlue;
     border-radius: 27px;
     font-family: $boldFont;
     font-size: 27px;
+    background-color: inherit;
     cursor: pointer;
     &:hover {
-        width: 155px;
-        height: 55px;
+        width: 305px;
+        height: 65px;
         font-size: 30px;
-        background-color: $bodyColor;
+        font-weight: 600;
+        background-color: $hoverColor;
         color: $customBlue;
+    }
+
+    &:active {
+        border-width: 5px;
+        border-color: $hoverColor;
     }
 }
 

@@ -6,10 +6,11 @@ export default function Error() {
     return (
         <>
             <div className={styles.container}>
-                <div className={styles.errorTitle}>Страница не найдена</div>
+                <div className={styles.errorTitle}>Oops!</div>
+                <div className={styles.errorMessage}>We can't find the page that you're looking for :(</div>
                 <Link to='/' className={styles.links}>
                     <div className={styles.btnContainer}>
-                        <button className={styles.button}>HOME</button>
+                        <button className={styles.button}>back to home</button>
                     </div>
                 </Link>
             </div>
