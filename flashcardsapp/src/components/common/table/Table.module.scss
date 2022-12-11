@@ -13,7 +13,9 @@
 }
 
 .newWordContainer {
+    display: none;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .tableNumberTitle, 
@@ -25,7 +27,10 @@
 .tableTranscription,
 .tableTranslation,
 .addBtn,
-.saveBtn {
+.saveBtn,
+.saveEditBtn,
+.editTable,
+.deleteWordBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +44,53 @@
 .tableTranslationTitle,
 .tableNumber,
 .addBtn,
-.saveBtn {
+.editTable {
     border: 2px solid $customBlue;
+}
+
+.editTable {
+    &:active {
+        background-color: $customBlue;
+        color: $customGray;
+    }
+}
+
+.deleteWordBtn {
+    border: 2px solid $customRed;
+    color: $customRed;
+
+    &:hover {
+        border-width: 3px;
+        font-weight: bolder;
+    }
+
+    &:active {
+        background-color: $customRed;
+        color: $customGray;
+    }
+}
+
+.saveEditBtn {
+    &:hover {
+        border-width: 3px;
+        font-weight: bolder;
+    }
+}
+
+.deleteWordBtn,
+.saveEditBtn {
+    height: 54px;
+}
+
+.saveBtn,
+.saveEditBtn {
+    border: 2px solid $customGreen;
+    color: $customGreen;
+
+    &:active {
+        background-color: $customGreen;
+        color: $customGray;
+    }
 }
 
 .tableWord,
@@ -54,46 +104,26 @@
     }
 }
 
-.wordBtn,
 .addBtn,
-.saveBtn {
+.saveBtn,
+.deleteWordBtn,
+.saveEditBtn,
+.editTable {
     cursor: pointer;
 }
 
-.wordBtn {
-    font-family: $mainFont;
-    font-weight: 700;
-    border-radius: 25px;
-    border-style:none;
-    background-color: $customRed;
-    color: white;
-    &:hover {
-        color: black;
-    }
-}
-
-.addBtn,
-.saveBtn {
+.addBtn {
     font-family: $mainFont;
     font-weight: 700;
     color: $customBlue;
-}
-
-.addBtn {
     &:hover {
         border: 2px solid $customGreen;
         color: $customGreen;
     }
 }
 
-.saveBtn {
-    &:hover {
-        border: 2px solid $customGreen;
-        color: $customGreen;
-    }
-}
-
-.btnContainer {
+.btnContainer,
+.editBtnContainer {
     display: flex;
     justify-content: center;
 }
@@ -138,14 +168,13 @@
     }
     
     .addBtn,
-    .saveBtn {
+    .editTable {
         width: 20px;
         height: 20px;
     }
     
     .tableNumberTitle,
-    .tableNumber,
-    .wordBtn {
+    .tableNumber {
         display: none
     }
     
@@ -172,10 +201,7 @@
         line-height: 39px;
     }
     
-    .titleContainer {
-        grid-template-columns: 50px repeat(3, 180px);
-    }
-    
+    .titleContainer,
     .innerContainer,
     .newWordContainer {
         grid-template-columns: 50px repeat(3, 180px) 50px;
@@ -196,16 +222,16 @@
     .tableTranscription,
     .tableNumberTitle,
     .tableNumber,
-    .wordBtn, 
-    .addBtn {
+    .addBtn,
+    .editTable {
         border-radius: 25px;
     }
     
     .tableNumberTitle,
     .tableNumber,
-    .wordBtn,
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .editTable {
         width: 50px;
         height: 50px;
     }
@@ -232,11 +258,8 @@
         font-size: 20px;
         line-height: 39px;
     }
-    
-    .titleContainer {
-        grid-template-columns: 50px repeat(3, 200px);
-    }
-    
+
+    .titleContainer,
     .innerContainer,
     .newWordContainer {
         grid-template-columns: 50px repeat(3, 200px) 50px;
@@ -257,23 +280,19 @@
     .tableTranscription,
     .tableNumberTitle,
     .tableNumber,
-    .wordBtn, 
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .editTable {
         border-radius: 25px;
     }
     
     .tableNumberTitle,
     .tableNumber,
-    .wordBtn,
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .editTable {
         width: 50px;
         height: 50px;
-    }
-
-    .wordBtn {
-        margin-left: 15px;
     }
     
     .addBtn,
@@ -299,10 +318,7 @@
         line-height: 39px;
     }
     
-    .titleContainer {
-        grid-template-columns: 54px repeat(3, 300px);
-    }
-    
+    .titleContainer,
     .innerContainer,
     .newWordContainer {
         grid-template-columns: 54px repeat(3, 300px) 54px;
@@ -315,18 +331,18 @@
         height: 65px;
     }
     
+    .editTable,
     .tableNumberTitle,
     .tableNumber,
-    .wordBtn,
     .addBtn,
     .saveBtn {
         width: 54px;
         height: 54px;
     }
     
-    .wordBtn,
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .editTable {
         &:hover {
             width: 55px;
             height: 55px;
@@ -334,8 +350,7 @@
     }
     
     .addBtn,
-    .saveBtn,
-    .wordBtn  {
+    .saveBtn  {
         font-size: 32px;
     }
 }
