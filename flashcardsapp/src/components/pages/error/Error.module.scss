@@ -45,12 +45,13 @@
         font-size: 30px;
         font-weight: 600;
         background-color: $hoverColor;
-        color: $customBlue;
+        color: $customGray;
     }
 
     &:active {
         border-width: 5px;
         border-color: $hoverColor;
+        color: $customBlue;
     }
 }
 
