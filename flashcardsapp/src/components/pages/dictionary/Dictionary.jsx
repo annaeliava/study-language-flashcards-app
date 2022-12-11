@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Dictionary.module.scss';
 import 'normalize.css';
-import Titles from '../../common/table/firstLine/Titles';
 import Words from '../../common/table/words/Words';
 import New from '../../common/table/newWord/New';
-import Add from '../../common/table/addBtn/addBtn';
-
+import Titles from '../../common/table/firstLine/Titles';
+import AddNewWord from '../../common/table/addNewWord/addNewWord';
 
 const vocabulary = [
     { id: 1, english: 'finger', transcription: '[ˈfɪŋɡə]', russian: 'палец' }
 ];
 
 export default function Dictionary() {
+    const [newWord, setNewWord] = useState(false);
+    //shows form for new word
+    const handleNewWord = () => {
+        setNewWord(true);
+    };
+    //hides form 
+    const saveNewWord = () => {
+        setNewWord(false);
+    };
+
     return (
         <>
             <div className="container">
@@ -19,8 +28,8 @@ export default function Dictionary() {
                 <div className={styles.mainContainer}>
                     <Titles />
                     {vocabulary.map(table => <Words data={table} key={table.id} />)}
-                    <Add />
-                    <New />
+                    <AddNewWord handleNewWord={handleNewWord} />
+                    {newWord ? <New saveNewWord={saveNewWord} /> : ''}
                 </div>
             </div>
         </>
