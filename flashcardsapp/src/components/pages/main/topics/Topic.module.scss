@@ -3,7 +3,9 @@
 .container {
     display: flex;
     justify-content: space-between;
+    align-self: center;
     border: 1px $customWhite;
+    border-radius: 15px;
     background-color: $customWhite;
 }
 
@@ -28,6 +30,18 @@
         padding-right: 53px;
         width: 250px;
         height: 60px;
+        &:hover {
+            border: 3px solid $customBlue;
+        }
+
+        &:active {
+            border-color: $hoverColor;
+            
+            .topic,
+            .quantity {
+                font-size: 22px;
+            }
+        }
     }
 
     .topic,
@@ -46,6 +60,18 @@
         padding-right: 53px;
         width: 400px;
         height: 58px;
+        &:hover {
+            border: 3px solid $customBlue;
+        }
+
+        &:active {
+            border-color: $hoverColor;
+
+            .topic,
+            .quantity {
+                font-size: 27px;
+            }
+        }
     }
 
     .topic,
@@ -64,6 +90,19 @@
         padding-right: 53px;
         width: 480px;
         height: 100px;
+        &:hover {
+            border: 3px solid $customBlue;
+        }
+
+        
+        &:active {
+            border-color: $hoverColor;
+
+            .topic,
+            .quantity {
+                font-size: 38px;
+            }
+        }
     }
 
     .topic,
@@ -82,6 +121,18 @@
         padding-right: 53px;
         width: 600px;
         height: 100px;
+        &:hover {
+            border: 3px solid $customBlue;
+        }
+
+        &:active {
+            border-color: $hoverColor;
+
+            .topic,
+            .quantity {
+                font-size: 38px;
+            }
+        }
     }
 
     .topic,
@@ -100,6 +151,18 @@
         padding-right: 53px;
         width: 600px;
         height: 100px;
+        &:hover {
+            border: 3px solid $customBlue;
+        }
+
+        &:active {
+            border-color: $hoverColor;
+
+            .topic,
+            .quantity {
+                font-size: 38px;
+            }
+        }
     }
 
     .topic,

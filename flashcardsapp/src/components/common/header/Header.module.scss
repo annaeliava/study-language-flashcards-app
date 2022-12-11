@@ -61,6 +61,14 @@
         position: absolute;
         top: 25px;
         left: 70px;
+
+        &:hover {
+            font-size: 38px;
+        }
+
+        &:active {
+            color: $hoverColor;
+        }
     }
     
     .currentLanguage {
@@ -76,14 +84,14 @@
     
     .homeBtn {
         position: absolute;
-        top: 14px;
+        top: 9px;
         left: 61px;
-        width: 44px;
-        height: 33px;
         cursor: pointer;
         &:hover {
-            width: 45px;
-            height: 34px;
+            color: $customBlue;
+        }
+
+        &:active {
             color: $hoverColor;
         }
     }
@@ -98,6 +106,11 @@
         &:hover {
             width: 67px;
             height: 62px;
+        }
+
+        &:active {
+            border-radius: 50px;
+            border: 2px solid $hoverColor;
         }
     }
     
@@ -139,6 +152,14 @@
         position: absolute;
         top: 25px;
         left: 10%;
+
+        &:hover {
+            font-size: 38px;
+        }
+
+        &:active {
+            color: $hoverColor;
+        }
     }
     
     .currentLanguage {
@@ -154,14 +175,14 @@
     
     .homeBtn {
         position: absolute;
-        top: 14px;
+        top: 9px;
         left: 61px;
-        width: 44px;
-        height: 33px;
         cursor: pointer;
         &:hover {
-            width: 45px;
-            height: 34px;
+            color: $customBlue;
+        }
+
+        &:active {
             color: $hoverColor;
         }
     }
@@ -176,6 +197,11 @@
         &:hover {
             width: 67px;
             height: 62px;
+        }
+
+        &:active {
+            border-radius: 50px;
+            border: 2px solid $hoverColor;
         }
     }
     
@@ -217,6 +243,15 @@
         position: absolute;
         top: 25px;
         left: 10%;
+
+        &:hover {
+            font-size: 38px;
+            color: $customBlue;
+        }
+
+        &:active {
+            color: $hoverColor;
+        }
     }
     
     .currentLanguage {
@@ -226,20 +261,24 @@
         cursor: pointer;
         &:hover {
             font-size: 37px;
+            color: $customBlue;
+        }
+
+        &:active {
             color: $hoverColor;
         }
     }
     
     .homeBtn {
         position: absolute;
-        top: 14px;
+        top: 9px;
         left: 61px;
-        width: 44px;
-        height: 33px;
         cursor: pointer;
         &:hover {
-            width: 45px;
-            height: 34px;
+            color: $customBlue;
+        }
+
+        &:active {
             color: $hoverColor;
         }
     }
@@ -254,6 +293,11 @@
         &:hover {
             width: 67px;
             height: 62px;
+        }
+
+        &:active {
+            border-radius: 50px;
+            border: 2px solid $hoverColor;
         }
     }
     

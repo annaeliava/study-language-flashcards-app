@@ -20,7 +20,12 @@
         text-transform: uppercase;
         cursor: pointer;
         color: #000000;
+
         &:hover {
+            color: $customBlue;
+        }
+
+        &:active {
             color: $hoverColor;
         }
     }
@@ -50,7 +55,12 @@
         text-transform: uppercase;
         cursor: pointer;
         color: #000000;
+        
         &:hover {
+            color: $customBlue;
+        }
+
+        &:active {
             color: $hoverColor;
         }
     }
