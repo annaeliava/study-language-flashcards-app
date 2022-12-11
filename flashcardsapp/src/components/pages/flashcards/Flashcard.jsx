@@ -7,13 +7,13 @@ import basic_data from '../topics_words/basic/basic-topic_data';
 
 export default function Flashcards() {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    //shows previous card
     const handleBack = () => {
         const isFirstCard = currentIndex === 0
         const newIndex = isFirstCard ? basic_data.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
-
+    //shows next card
     const handleNext = () => {
         const isLastCard = currentIndex === basic_data.length - 1;
         const newIndex = isLastCard ? 0 : currentIndex + 1;
