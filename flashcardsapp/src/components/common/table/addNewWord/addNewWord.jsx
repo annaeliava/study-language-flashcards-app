@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../Table.module.scss";
 import AddIcon from '@mui/icons-material/Add';
 
-export default function Add(props) {
+export default function AddNewWord(props) {
     const { handleNewWord } = props;
     return (
         <>
