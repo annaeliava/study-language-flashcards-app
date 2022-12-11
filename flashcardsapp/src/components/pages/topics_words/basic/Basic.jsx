@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Topics.module.scss";
 import Words from "../../../common/table/words/Words";
 import basic_data from "./basic-topic_data";
 import Titles from "../../../common/table/firstLine/Titles";
-import Add from "../../../common/table/addBtn/addBtn";
+import New from "../../../common/table/newWord/New";
+import AddNewWord from "../../../common/table/addNewWord/addNewWord";
 
 export default function Basic() {
+    const [newWord, setNewWord] = useState(false);
+    //shows form for new word
+    const handleNewWord = () => {
+        setNewWord(true);
+    };
+    //hides form 
+    const saveNewWord = () => {
+        setNewWord(false);
+    };
+
     return (
         <>
             <div>
@@ -13,7 +24,8 @@ export default function Basic() {
                 <div className={styles.mainContainer}>
                     <Titles />
                     {basic_data.map(table => <Words data={table} />)}
-                    <Add />
+                    <AddNewWord handleNewWord={handleNewWord} />
+                    {newWord ? <New saveNewWord={saveNewWord} /> : ''}
                 </div>
             </div>
         </>
