@@ -15,17 +15,17 @@ export default function Card(props) {
                     <div className={styles.topic}>{data.topic || '...'}</div>
                     <div className={styles.word}>{data.english || 'Sorry'}</div>
                     <div className={styles.transcription}>{data.transcription || 'something went wrong'}</div>
-                    <div className={styles.translation}>{data.russian || 'Sorry'}</div>
-                    <div className={styles.translations}>{data.additional || 'something went wrong'}</div>
+                    <div className={styles.translation}>{data.russian || ':('}</div>
+                    <div className={styles.translations}>{data.additional}</div>
                 </div>
             </div>
         </>
     );
 }
 
-Card.defaultProps = {
+/*Card.defaultProps = {
     topic: '...',
     english: 'Hello',
     transcription: 'World',
     russian: 'Sorry'
-}; //почему не работает 
+}; почему не работает */
