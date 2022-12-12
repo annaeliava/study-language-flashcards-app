@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import AddNewWord from "../../../common/table/addNewWord/addNewWord";
 import Titles from "../../../common/table/firstLine/Titles";
 import New from "../../../common/table/newWord/New";
@@ -26,6 +27,11 @@ export default function Clothes() {
                     {clothes_data.map(table => <Words data={table} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {newWord ? <New saveNewWord={saveNewWord} /> : ''}
+                    <div className={styles.gameBtnContainer}>
+                        <Link to='/clothes_game' className={styles.link}>
+                            <button className={styles.gameBtn}>practice</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>

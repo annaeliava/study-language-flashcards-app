@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import styles from "../Topics.module.scss";
 import Words from "../../../common/table/words/Words";
 import basic_data from "./basic-topic_data";
@@ -26,6 +27,12 @@ export default function Basic() {
                     {basic_data.map(table => <Words data={table} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {newWord ? <New saveNewWord={saveNewWord} /> : ''}
+                    <div className={styles.gameBtnContainer}>
+                        <Link to='/basic_game' className={styles.link}>
+                            <button className={styles.gameBtn}>practice</button>
+                        </Link>
+                    </div>
+
                 </div>
             </div>
         </>
