@@ -14,6 +14,10 @@ import Basic from './components/pages/topics_words/basic/Basic';
 import Verbs from './components/pages/topics_words/verbs/Verbs';
 import Food from './components/pages/topics_words/food/Food';
 import Clothes from './components/pages/topics_words/clothes/Clothes';
+import BasicGame from './components/pages/flashcards/flashcards for topics/flashcardsBasic';
+import ClothesGame from './components/pages/flashcards/flashcards for topics/flashcardsClothes';
+import VerbsGame from './components/pages/flashcards/flashcards for topics/flashcardsVerbs';
+import FoodGame from './components/pages/flashcards/flashcards for topics/flashcardsFood';
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
             <Route path='/food' element={<Food />} />
             <Route path='/clothes' element={<Clothes />} />
             <Route path='/game' element={<Flashcards />} />
+            <Route path='/basic_game' element={<BasicGame />}/>
+            <Route path='/clothes_game' element={<ClothesGame />} />
+            <Route path='/verbs_game' element={<VerbsGame />} />
+            <Route path='/food_game' element={<FoodGame />} />
             <Route path='/dictionary' element={<Dictionary />} />
             <Route exact path='/' element={<Main />} />
             <Route path='*' element={<Error />} />
