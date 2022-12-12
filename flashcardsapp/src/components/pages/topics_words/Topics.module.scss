@@ -13,6 +13,45 @@
     color: $customBlue;
 }
 
+.gameBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 45px;
+    border: 2px solid $customBlue;
+    border-radius: 25px;
+    font-size: 27px;
+    font-family: $mainFont;
+    font-weight: 600;
+    color: $customBlue;
+    cursor: pointer;
+
+    &:hover {
+        width: 162px;
+        height: 47px;
+        border-width: 3px;
+    }
+
+    &:active {
+        width: 163px;
+        height: 48px;
+        background-color: $customBlue;
+        color: $customGray;
+    }
+}
+
+.gameBtnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.link {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 480px)  {
     .title {
         margin-top: 15px;
