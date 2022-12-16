@@ -28,9 +28,9 @@ export default function Words(props) {
                     <button className={styles.saveEditBtn} onClick={handleSaveEditing}><DoneIcon /></button>
                 </div>
                     :
-                    <div className={styles.editTable} onClick={handleEditTable}><CreateIcon /></div>
+                    <button className={styles.editTable} onClick={handleEditTable}><CreateIcon /></button>
                 }
             </div>
         </>
-    )
-};
+    );
+}

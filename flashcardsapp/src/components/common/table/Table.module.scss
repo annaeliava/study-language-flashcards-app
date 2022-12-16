@@ -49,6 +49,8 @@
 }
 
 .editTable {
+    color: $customBlue;
+
     &:active {
         background-color: $customBlue;
         color: $customGray;
@@ -99,6 +101,7 @@
     padding-left: 35px;
     border: 2px solid $customGray;
     cursor: pointer;
+    
     &:hover {
         border: 2px solid $customBlue;
     }
@@ -116,9 +119,15 @@
     font-family: $mainFont;
     font-weight: 700;
     color: $customBlue;
+
     &:hover {
         border: 2px solid $customGreen;
         color: $customGreen;
+    }
+
+    &:active {
+        background-color: $customGreen;
+        color: $customGray;
     }
 }
 

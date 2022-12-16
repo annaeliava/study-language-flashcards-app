@@ -23,9 +23,9 @@ export default function BasicGame() {
         <>
             <div className={styles.container}>
                 <div className={styles.cardContainer}>
-                    <div className={styles.prevBtn} onClick={handleBack}><ArrowBackIcon /></div>
+                    <button className={styles.prevBtn} onClick={handleBack}><ArrowBackIcon /></button>
                     {basic_data.map(card => <Card data={card} key={card.id} />)[currentIndex]}
-                    <div className={styles.nextBtn} onClick={handleNext}><ArrowForwardIcon /></div>
+                    <button className={styles.nextBtn} onClick={handleNext}><ArrowForwardIcon /></button>
                 </div>
                 <div className={styles.numbers}>{currentIndex + 1} / {basic_data.length}</div>
             </div>
