@@ -18,6 +18,7 @@ import BasicGame from './components/pages/flashcards/flashcards for topics/flash
 import ClothesGame from './components/pages/flashcards/flashcards for topics/flashcardsClothes';
 import VerbsGame from './components/pages/flashcards/flashcards for topics/flashcardsVerbs';
 import FoodGame from './components/pages/flashcards/flashcards for topics/flashcardsFood';
+import Login from './components/pages/login/Login';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Header />
         <main>
           <Routes>
+            <Route path='/users' element={<Login />} />
             <Route path='/basic' element={<Basic />} />
             <Route path='/verbs' element={<Verbs />} />
             <Route path='/food' element={<Food />} />
