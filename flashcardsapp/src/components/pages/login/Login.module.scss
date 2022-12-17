@@ -1,0 +1,14 @@
+@import '../../../assets/styles/variables.scss';
+
+.container {
+    margin: 12px auto 0 100px;
+    font-size: 30px;
+
+    .inputContainer {
+        margin-bottom: 20px;
+    
+        .inputLogin {
+            margin-right: 20px;
+        }
+    }
+}
