@@ -8,10 +8,10 @@ import food_data from '../topics_words/food/food-topic_data.js';
 import clothes_data from '../topics_words/clothes/clothes-topic_data.js';
 
 const topics_data = [
-    { topic: 'basic', quantity: basic_data.length, linkToTopic: 'basic' },
-    { topic: 'verbs', quantity: verbs_data.length, linkToTopic: 'verbs' },
-    { topic: 'food', quantity: food_data.length, linkToTopic: 'food' },
-    { topic: 'clothes', quantity: clothes_data.length, linkToTopic: 'clothes' }
+    { topic: basic_data[0].topic, quantity: basic_data.length, linkToTopic: 'basic' },
+    { topic: verbs_data[0].topic, quantity: verbs_data.length, linkToTopic: 'verbs' },
+    { topic: food_data[0].topic, quantity: food_data.length, linkToTopic: 'food' },
+    { topic: clothes_data[0].topic, quantity: clothes_data.length, linkToTopic: 'clothes' }
 ];
 
 const sidebar_data = [
@@ -19,19 +19,17 @@ const sidebar_data = [
     { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'dictionary', linkTo: 'dictionary' }
 ]
 
-function Main() {
+export default function Main() {
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.topicContainer}>
-                    {topics_data.map(topic => <Topic data={topic} />)}
+                    {topics_data.map(topic => <Topic data={topic} key={topic.id} />)}
                 </div>
                 <div className={styles.sidebarContainer}>
-                    {sidebar_data.map(menu => <Sidebar data={menu} />)}
+                    {sidebar_data.map(menu => <Sidebar data={menu} key={menu.id} />)}
                 </div>
             </div>
         </>
     );
 }
-
-export default Main;

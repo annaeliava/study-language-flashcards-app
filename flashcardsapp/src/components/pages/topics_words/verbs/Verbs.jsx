@@ -24,7 +24,7 @@ export default function Verbs() {
                 <div className={styles.title}>Verbs</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {verbs_data.map(table => <Words data={table} />)}
+                    {verbs_data.map(table => <Words data={table} key={table.id} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {newWord ? <New saveNewWord={saveNewWord} /> : ''}
                     <div className={styles.gameBtnContainer}>

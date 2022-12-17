@@ -24,7 +24,7 @@ export default function Clothes() {
                 <div className={styles.title}>Clothes</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {clothes_data.map(table => <Words data={table} />)}
+                    {clothes_data.map(table => <Words data={table} key={table.id} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {newWord ? <New saveNewWord={saveNewWord} /> : ''}
                     <div className={styles.gameBtnContainer}>

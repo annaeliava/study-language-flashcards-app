@@ -24,7 +24,7 @@ export default function Basic() {
                 <div className={styles.title}>Basic</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {basic_data.map(table => <Words data={table} />)}
+                    {basic_data.map(table => <Words data={table} key={table.id} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {newWord ? <New saveNewWord={saveNewWord} /> : ''}
                     <div className={styles.gameBtnContainer}>

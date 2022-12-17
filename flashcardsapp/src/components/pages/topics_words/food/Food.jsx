@@ -24,7 +24,7 @@ export default function Food() {
                 <div className={styles.title}>Food</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {food_data.map(table => <Words data={table} />)}
+                    {food_data.map(table => <Words data={table} key={table.id} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {newWord ? <New saveNewWord={saveNewWord} /> : ''}
                     <div className={styles.gameBtnContainer}>
