@@ -23,13 +23,13 @@ export default function Flashcards() {
         }
         return <>{basic_data.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}</> // не получается вывести обратно карточку
     }
-    //shows previous card
+    //shows a previous card
     const handleBack = () => {
         const isFirstCard = currentIndex === 0
         const newIndex = isFirstCard ? 0 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
-    //shows next card
+    //shows a next card
     const handleNext = () => {
         const isLastCard = currentIndex === basic_data.length - 1;
         const newIndex = isLastCard ? handleFinish() : currentIndex + 1;
@@ -39,6 +39,7 @@ export default function Flashcards() {
     return (
         <>
             <div className={styles.container}>
+                {learnt > 0 ? <div className={styles.counter}>You've learnt {learnt} {learnt < 2 ? 'word' : 'words'}!</div> : ''}
                 <div className={styles.cardContainer}>
                     <button className={styles.prevBtn} onClick={handleBack}><ArrowBackIcon /></button>
                     {basic_data.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}

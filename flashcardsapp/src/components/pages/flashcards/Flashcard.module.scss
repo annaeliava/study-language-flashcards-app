@@ -1,73 +1,87 @@
 @import '../../../assets/styles/variables.scss'; 
 
 .container {
-    margin-top: 30px;
+    margin-top: 5px;
     margin-right: 10px;
     margin-left: 10px;
-}
 
-.cardContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.prevBtn,
-.nextBtn {
-    display: flex;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    border: none;
-    background-color: $bodyColor;
-    font-size: 20px;
-    cursor: pointer;
-
-    &:hover {
+    
+    .counter {
+        margin-bottom: 10px;
         color: $customBlue;
     }
-    &:active {
-        color: $hoverColor;
+
+    .numbers {
+        color: #000;
     }
-}
 
-.prevBtn {
-    margin-right: 5%;
-}
+    .numbers,
+    .counter {
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        font-family: $boldFont;
+        font-weight: 600;
+    }
 
-.nextBtn {
-    margin-left: 5%;
-}
-
-.numbers {
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    font-family: $boldFont;
-    font-weight: 600;
-    color: #000;
+    .cardContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .prevBtn {
+            margin-right: 5%;
+        }
+        
+        .nextBtn {
+            margin-left: 5%;
+        }
+    
+        .prevBtn,
+        .nextBtn {
+            display: flex;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border: none;
+            background-color: $bodyColor;
+            font-size: 20px;
+            cursor: pointer;
+    
+            &:hover {
+                color: $customBlue;
+            }
+            &:active {
+                color: $hoverColor;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .numbers {
-        font-size: 20px;
+    .numbers,
+    .counter {
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
-    .numbers {
-        font-size: 20px;
+    .numbers,
+    .counter {
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width:769px) and (max-width:1279px) {
-    .numbers {
-        font-size: 36px;
+    .numbers,
+    .counter {
+        font-size: 34px;
     }
 }
 
 @media screen and (min-width:1280px) {
-    .numbers {
-        font-size: 36px;
+    .numbers,
+    .counter {
+        font-size: 34px;
     }
 }
