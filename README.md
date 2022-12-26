@@ -18,6 +18,3 @@ In the project directory, you can run:
     <img title='js' alt='js' width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />&nbsp;
     <img title='react' alt='react' width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
 </div>
-          
-          
-          
