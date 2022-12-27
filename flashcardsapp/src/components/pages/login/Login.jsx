@@ -15,13 +15,16 @@ export default function Login() {
 
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.inputContainer}>
-                    <input type="text" placeholder="login" name="login" id="login" className={styles.inputLogin} value={login} onChange={handleChangeLogin} />
-                    <input type="password" placeholder="password" name="password" id="password" className={styles.inputPassword} value={password} onChange={handleChangePassword} />
+            <form>
+                <div className={styles.container}>
+                    <h1>Login</h1>
+                    <div className={styles.inputContainer}>
+                        <input type="text" placeholder="login" name="login" id="login" className={styles.inputLogin} value={login} onChange={handleChangeLogin} />
+                        <input type="password" placeholder="password" name="password" id="password" className={styles.inputPassword} value={password} onChange={handleChangePassword} />
+                    </div>
+                    <button className={styles.btnLogin}>login</button>
                 </div>
-                <button className={styles.btnLogin}>login</button>
-            </div>
+            </form>
         </>
     );
 }
