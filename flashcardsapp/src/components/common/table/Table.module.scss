@@ -30,7 +30,8 @@
 .saveBtn,
 .saveEditBtn,
 .editTable,
-.deleteWordBtn {
+.deleteWordBtn,
+.cancelBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +58,8 @@
     }
 }
 
-.deleteWordBtn {
+.deleteWordBtn,
+.cancelBtn {
     border: 2px solid $customRed;
     color: $customRed;
 
@@ -72,13 +74,6 @@
     }
 }
 
-.saveEditBtn {
-    &:hover {
-        border-width: 3px;
-        font-weight: bolder;
-    }
-}
-
 .deleteWordBtn,
 .saveEditBtn {
     height: 54px;
@@ -88,6 +83,11 @@
 .saveEditBtn {
     border: 2px solid $customGreen;
     color: $customGreen;
+
+    &:hover {
+        border-width: 3px;
+        font-weight: bolder;
+    }
 
     &:active {
         background-color: $customGreen;
@@ -111,7 +111,8 @@
 .saveBtn,
 .deleteWordBtn,
 .saveEditBtn,
-.editTable {
+.editTable,
+.cancelBtn {
     cursor: pointer;
 }
 
@@ -177,7 +178,8 @@
     }
     
     .addBtn,
-    .editTable {
+    .editTable,
+    .cancelBtn {
         width: 20px;
         height: 20px;
     }
@@ -188,7 +190,8 @@
     }
     
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .cancelBtn {
         font-size: 12px;
     }
 }
@@ -232,7 +235,8 @@
     .tableNumberTitle,
     .tableNumber,
     .addBtn,
-    .editTable {
+    .editTable,
+    .cancelBtn {
         border-radius: 25px;
     }
     
@@ -240,13 +244,15 @@
     .tableNumber,
     .addBtn,
     .saveBtn,
-    .editTable {
+    .editTable,
+    .cancelBtn {
         width: 50px;
         height: 50px;
     }
     
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .cancelBtn {
         font-size: 12px;
     }
 }
@@ -291,7 +297,8 @@
     .tableNumber,
     .addBtn,
     .saveBtn,
-    .editTable {
+    .editTable,
+    .cancelBtn {
         border-radius: 25px;
     }
     
@@ -299,13 +306,15 @@
     .tableNumber,
     .addBtn,
     .saveBtn,
-    .editTable {
+    .editTable,
+    .cancelBtn {
         width: 50px;
         height: 50px;
     }
     
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .cancelBtn {
         font-size: 20px;
     }
 }
@@ -344,14 +353,16 @@
     .tableNumberTitle,
     .tableNumber,
     .addBtn,
-    .saveBtn {
+    .saveBtn,
+    .cancelBtn {
         width: 54px;
         height: 54px;
     }
     
     .addBtn,
     .saveBtn,
-    .editTable {
+    .editTable,
+    .cancelBtn {
         &:hover {
             width: 55px;
             height: 55px;
@@ -359,7 +370,8 @@
     }
     
     .addBtn,
-    .saveBtn  {
+    .saveBtn,
+    .cancelBtn  {
         font-size: 32px;
     }
 }
