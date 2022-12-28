@@ -1,4 +1,5 @@
 import './assets/styles/app.scss';
+import React, {useState} from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -20,8 +21,26 @@ import {
   FoodGame,
   Login
 } from './components/pages';
+import basic_data from './components/pages/topics_words/basic/basic-topic_data';
 
 function App() {
+  const [words, setWords] = useState(basic_data);
+
+  const createOrUpdate = (newWord) => {
+    const wordIndex = words.findIndex(word => word.id === newWord.id);
+    if(wordIndex >= 0) {
+      setWords([...words.slice(0, wordIndex), newWord, ...words.slice(wordIndex + 1)]);
+    } else {
+      setWords([...words, newWord]);
+    }
+    setWords([...words, newWord]);
+  };
+
+  //delete a word
+  const deleteWord = (wordID) => {
+    const filteredWords = words.filter(word => word.id !== wordID);
+    setWords(filteredWords);
+};
   return (
     <BrowserRouter>
       <div className='App'>
@@ -38,7 +57,7 @@ function App() {
             <Route path='/clothes_game' element={<ClothesGame />} />
             <Route path='/verbs_game' element={<VerbsGame />} />
             <Route path='/food_game' element={<FoodGame />} />
-            <Route path='/dictionary' element={<Dictionary />} />
+            <Route path='/dictionary' element={<Dictionary words={words} createOrUpdate={createOrUpdate} deleteWord={deleteWord} />} />
             <Route exact path='/' element={<Main />} />
             <Route path='*' element={<Error />} />
           </Routes>

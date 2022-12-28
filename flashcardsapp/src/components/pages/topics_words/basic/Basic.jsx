@@ -4,7 +4,6 @@ import styles from "../Topics.module.scss";
 import Words from "../../../common/table/words/Words";
 import basic_data from "./basic-topic_data";
 import Titles from "../../../common/table/firstLine/Titles";
-import New from "../../../common/table/newWord/New";
 import AddNewWord from "../../../common/table/addNewWord/addNewWord";
 
 export default function Basic() {
@@ -26,7 +25,7 @@ export default function Basic() {
                     <Titles />
                     {basic_data.map(table => <Words data={table} key={table.id} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
-                    {newWord ? <New saveNewWord={saveNewWord} /> : ''}
+                    {newWord ? <div>hello</div> : ''}
                     <div className={styles.gameBtnContainer}>
                         <Link to='/basic_game' className={styles.link}>
                             <button className={styles.gameBtn}>practice</button>

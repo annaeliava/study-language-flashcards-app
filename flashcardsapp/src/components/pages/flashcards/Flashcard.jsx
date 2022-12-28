@@ -6,6 +6,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import basic_data from '../topics_words/basic/basic-topic_data';
 
 export default function Flashcards() {
+    const [cards, setCards] = useState(basic_data);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [learnt, setLearnt] = useState(0);
     //a counter of the learnt words
@@ -21,7 +22,8 @@ export default function Flashcards() {
         } else {
             alert(`You have learnt ${learnt} words! Good job!`);
         }
-        return <>{basic_data.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}</> // не получается вывести обратно карточку
+
+        setCards(cards); // не получается вывести обратно карточку
     }
     //shows a previous card
     const handleBack = () => {
@@ -44,7 +46,7 @@ export default function Flashcards() {
                     <button className={styles.prevBtn} onClick={handleBack}>
                         <ArrowBackIcon />
                     </button>
-                    {basic_data.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}
+                    {cards.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}
                     <button className={styles.nextBtn} onClick={handleNext}>
                         <ArrowForwardIcon />
                     </button>

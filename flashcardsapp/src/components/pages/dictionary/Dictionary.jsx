@@ -5,44 +5,40 @@ import Words from '../../common/table/words/Words';
 import Titles from '../../common/table/firstLine/Titles';
 import AddNewWord from '../../common/table/addNewWord/addNewWord';
 import DoneIcon from '@mui/icons-material/Done';
+import ClearIcon from '@mui/icons-material/Clear';
 
-const vocabulary = [
-    { id: 1, english: 'finger', transcription: '[ˈfɪŋɡə]', russian: 'палец' }
-];
+const initialWord = {
+    id: 1, english: '', russian: '', transcription: ''
+};
 
-export default function Dictionary() {
-    const [words, setWords] = useState(vocabulary);
+export default function Dictionary({ createOrUpdate, words, deleteWord }) {
+    const [newWord, setNewWord] = useState(initialWord);
     const [input, setInput] = useState(false);
-    const [english, setEnglish] = useState('');
-    const [transcription, setTranscription] = useState('');
-    const [russian, setRussian] = useState('');
-    //shows form for new word
+
+    //shows form for a new word
     const handleNewWord = () => {
         setInput(true);
+    };
+    //hides form
+    const handleCancel = () => {
+        setInput(false);
+        setNewWord('');
     };
     //adding new word
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newId = Math.max(...words.map(table => table.id)) + 1;
-        setWords([...words, { ...english, ...transcription, ...russian, id: newId }]);
-        setEnglish('');
-        setTranscription('');
-        setRussian('');
-        setInput(false);
+
+        const temp = { ...newWord };
+        temp.id = Math.max(...words.map(table => table.id)) + 1;;
+        createOrUpdate(temp);
+        setNewWord(initialWord);
+        alert('saved!');
     };
     //typing in input
-    const handleChangeEng = (e) => {
-        setEnglish(e.target.value);
-    };
-    const handleChangeTranscr = (e) => {
-        setTranscription(e.target.value);
-    };
-    const handleChangeRus = (e) => {
-        setRussian(e.target.value);
-    };
-    //delete a word
-    const deleteWord = (wordID) => {
-        setWords(words.filter(table => table.id !== wordID));
+    const handleChange = (fieldName, value) => {
+        const temp = { ...newWord };
+        temp[fieldName] = value;
+        setNewWord(temp);
     };
 
     return (
@@ -51,16 +47,38 @@ export default function Dictionary() {
                 <div className={styles.title}>dictionary</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {words.map(table => <Words data={table} key={table.id} deleteWord={deleteWord} />)}
+                    {words.map(word => <Words data={word} key={word.id} handleChange={handleChange} deleteWord={deleteWord} createOrUpdate={createOrUpdate} />)}
                     <AddNewWord handleNewWord={handleNewWord} />
                     {input ?
                         <>
                             <div className={styles.newWordContainer}>
-                                <div className={styles.tableNumber}>*</div>
-                                <input type='text' name='english' className={styles.tableWord} onChange={handleChangeEng} value={english} />
-                                <input type='text' name='transcription' className={styles.tableTranscription} onChange={handleChangeTranscr} value={transcription} />
-                                <input type='text' name='russian' className={styles.tableTranslation} onChange={handleChangeRus} value={russian} />
-                                <button className={styles.saveBtn} onClick={handleSubmit}><DoneIcon /></button>
+                                <div className={styles.tableNumber}></div>
+                                <input
+                                    type='text'
+                                    name='english'
+                                    data-name={'english'}
+                                    className={styles.tableWord}
+                                    value={newWord.english}
+                                    onChange={(e) => handleChange('english', e.target.value)} />
+                                <input
+                                    type='text'
+                                    name='transcription'
+                                    data-name={'transcription'}
+                                    className={styles.tableTranscription}
+                                    value={newWord.transcription}
+                                    onChange={(e) => handleChange('transcription', e.target.value)} />
+                                <input
+                                    type='text'
+                                    name='russian'
+                                    data-name={'russian'}
+                                    className={styles.tableTranslation}
+                                    value={newWord.russian}
+                                    onChange={(e) => handleChange('russian', e.target.value)} />
+                                <div className={styles.editBtnContainer}>
+                                    <button className={styles.saveBtn} onClick={handleSubmit}><DoneIcon /></button>
+                                    <button className={styles.cancelBtn} onClick={handleCancel}><ClearIcon /></button>
+                                </div>
+
                             </div>
                         </>
                         : ''}

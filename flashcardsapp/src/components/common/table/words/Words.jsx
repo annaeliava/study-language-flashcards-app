@@ -5,7 +5,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import CreateIcon from '@mui/icons-material/Create';
 
 export default function Words(props) {
-    const { data, deleteWord } = props;
+    const { data, deleteWord, handleChange, createOrUpdate } = props;
 
     const [edit, setEdit] = useState(false);
     //shows edit buttons
@@ -15,31 +15,31 @@ export default function Words(props) {
     //hides edit buttons
     const handleSaveEditing = () => {
         setEdit(false);
-    };
-    //you can type in input
-    const [eng, setEng] = useState(data.english);
-    const [transcrip, setTranscrip] = useState(data.transcription);
-    const [rus, setRus] = useState(data.russian);
-
-    const handleChangeEng = (e) => {
-        setEng(e.target.value);
-    };
-
-    const handleChangeTranscrip = (e) => {
-        setTranscrip(e.target.value);
-    };
-
-    const handleChangeRus = (e) => {
-        setRus(e.target.value);
+        createOrUpdate();
     };
 
     return (
         <>
             <div className={styles.innerContainer}>
                 <div className={styles.tableNumber}>{data.id}</div>
-                <input type='text' name='english' className={styles.tableWord} value={eng} onChange={handleChangeEng} />
-                <input type='text' name='transcription' className={styles.tableTranscription} value={transcrip} onChange={handleChangeTranscrip} />
-                <input type='text' name='russian' className={styles.tableTranslation} value={rus} onChange={handleChangeRus} />
+                <input
+                    type='text'
+                    name='english'
+                    className={styles.tableWord}
+                    value={data.english}
+                    onChange={(e) => handleChange('english', e.target.value)} />
+                <input
+                    type='text'
+                    name='transcription'
+                    className={styles.tableTranscription}
+                    value={data.transcription}
+                    onChange={(e) => handleChange('transcription', e.target.value)} />
+                <input
+                    type='text'
+                    name='russian'
+                    className={styles.tableTranslation}
+                    value={data.russian}
+                    onChange={(e) => handleChange('russian', e.target.value)} />
                 {edit ? <div className={styles.editBtnContainer}>
                     <button className={styles.deleteWordBtn} onClick={() => deleteWord(data.id)}><DeleteOutlineIcon /></button>
                     <button className={styles.saveEditBtn} onClick={handleSaveEditing}><DoneIcon /></button>
