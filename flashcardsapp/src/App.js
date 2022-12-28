@@ -4,21 +4,22 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Header from './components/common/header/Header';
-import Footer from './components/common/footer/Footer';
-import Flashcards from './components/pages/flashcards/Flashcard';
-import Dictionary from './components/pages/dictionary/Dictionary';
-import Main from './components/pages/main/Main';
-import Error from './components/pages/error/Error';
-import Basic from './components/pages/topics_words/basic/Basic';
-import Verbs from './components/pages/topics_words/verbs/Verbs';
-import Food from './components/pages/topics_words/food/Food';
-import Clothes from './components/pages/topics_words/clothes/Clothes';
-import BasicGame from './components/pages/flashcards/flashcards for topics/flashcardsBasic';
-import ClothesGame from './components/pages/flashcards/flashcards for topics/flashcardsClothes';
-import VerbsGame from './components/pages/flashcards/flashcards for topics/flashcardsVerbs';
-import FoodGame from './components/pages/flashcards/flashcards for topics/flashcardsFood';
-import Login from './components/pages/login/Login';
+import {Header, Footer} from './components/common';
+import {
+  Flashcards,
+  Dictionary,
+  Main,
+  Error,
+  Basic,
+  Verbs,
+  Food,
+  Clothes,
+  BasicGame,
+  ClothesGame,
+  VerbsGame,
+  FoodGame,
+  Login
+} from './components/pages';
 
 function App() {
   return (

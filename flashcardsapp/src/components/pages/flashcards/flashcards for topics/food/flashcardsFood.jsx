@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styles from '../Flashcard.module.scss';
+import styles from '../../Flashcard.module.scss';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import food_data from "../../topics_words/food/food-topic_data";
-import Card from "../card/Card";
+import food_data from "../../../topics_words/food/food-topic_data";
+import Card from "../../card/Card";
 
 export default function FoodGame() {
     const [currentIndex, setCurrentIndex] = useState(0);

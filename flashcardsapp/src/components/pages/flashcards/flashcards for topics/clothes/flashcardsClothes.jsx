@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styles from '../Flashcard.module.scss';
+import styles from '../../Flashcard.module.scss';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import clothes_data from "../../topics_words/clothes/clothes-topic_data";
-import Card from "../card/Card";
+import clothes_data from "../../../topics_words/clothes/clothes-topic_data";
+import Card from "../../card/Card";
 
 export default function ClothesGame() {
     const [currentIndex, setCurrentIndex] = useState(0);

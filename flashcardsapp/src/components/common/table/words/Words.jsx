@@ -5,7 +5,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import CreateIcon from '@mui/icons-material/Create';
 
 export default function Words(props) {
-    const { data } = props;
+    const { data, deleteWord } = props;
 
     const [edit, setEdit] = useState(false);
     //shows edit buttons
@@ -41,7 +41,7 @@ export default function Words(props) {
                 <input type='text' name='transcription' className={styles.tableTranscription} value={transcrip} onChange={handleChangeTranscrip} />
                 <input type='text' name='russian' className={styles.tableTranslation} value={rus} onChange={handleChangeRus} />
                 {edit ? <div className={styles.editBtnContainer}>
-                    <button className={styles.deleteWordBtn}><DeleteOutlineIcon /></button>
+                    <button className={styles.deleteWordBtn} onClick={() => deleteWord(data.id)}><DeleteOutlineIcon /></button>
                     <button className={styles.saveEditBtn} onClick={handleSaveEditing}><DoneIcon /></button>
                 </div>
                     :
