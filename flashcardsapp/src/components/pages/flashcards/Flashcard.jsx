@@ -41,9 +41,13 @@ export default function Flashcards() {
             <div className={styles.container}>
                 {learnt > 0 ? <div className={styles.counter}>You've learnt {learnt} {learnt < 2 ? 'word' : 'words'}!</div> : ''}
                 <div className={styles.cardContainer}>
-                    <button className={styles.prevBtn} onClick={handleBack}><ArrowBackIcon /></button>
+                    <button className={styles.prevBtn} onClick={handleBack}>
+                        <ArrowBackIcon />
+                    </button>
                     {basic_data.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}
-                    <button className={styles.nextBtn} onClick={handleNext}><ArrowForwardIcon /></button>
+                    <button className={styles.nextBtn} onClick={handleNext}>
+                        <ArrowForwardIcon />
+                    </button>
                 </div>
                 <div className={styles.numbers}>{currentIndex + 1} / {basic_data.length}</div>
             </div>

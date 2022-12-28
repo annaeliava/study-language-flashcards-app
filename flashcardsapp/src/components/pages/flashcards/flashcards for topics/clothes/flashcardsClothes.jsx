@@ -23,9 +23,13 @@ export default function ClothesGame() {
         <>
             <div className={styles.container}>
                 <div className={styles.cardContainer}>
-                    <button className={styles.prevBtn} onClick={handleBack}><ArrowBackIcon /></button>
+                    <button className={styles.prevBtn} onClick={handleBack}>
+                        <ArrowBackIcon />
+                    </button>
                     {clothes_data.map(card => <Card data={card} key={card.id} />)[currentIndex]}
-                    <button className={styles.nextBtn} onClick={handleNext}><ArrowForwardIcon /></button>
+                    <button className={styles.nextBtn} onClick={handleNext}>
+                        <ArrowForwardIcon />
+                    </button>
                 </div>
                 <div className={styles.numbers}>{currentIndex + 1} / {clothes_data.length}</div>
             </div>
