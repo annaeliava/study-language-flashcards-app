@@ -8,7 +8,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import ClearIcon from '@mui/icons-material/Clear';
 
 const initialWord = {
-    id: 1, english: '', russian: '', transcription: ''
+    english: '', russian: '', transcription: ''
 };
 
 export default function Dictionary({ createOrUpdate, words, deleteWord }) {
