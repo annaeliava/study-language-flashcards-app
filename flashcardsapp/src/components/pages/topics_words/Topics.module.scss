@@ -22,8 +22,6 @@
     border: 2px solid $customBlue;
     border-radius: 25px;
     font-size: 27px;
-    font-family: $mainFont;
-    font-weight: 600;
     color: $customBlue;
     cursor: pointer;
 
@@ -86,6 +84,6 @@
     .mainContainer {
         display: grid;
         row-gap: 13px;
-        margin-left: 86px;
+        justify-content: center;
     }
 }

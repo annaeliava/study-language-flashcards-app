@@ -1,22 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 import styles from "../Topics.module.scss";
 import Words from "../../../common/table/words/Words";
 import basic_data from "./basic-topic_data";
 import Titles from "../../../common/table/firstLine/Titles";
-import AddNewWord from "../../../common/table/addNewWord/addNewWord";
+import ExtensionIcon from '@mui/icons-material/Extension';
 
 export default function Basic() {
-    const [newWord, setNewWord] = useState(false);
-    //shows form for new word
-    const handleNewWord = () => {
-        setNewWord(true);
-    };
-    //hides form 
-    const saveNewWord = () => {
-        setNewWord(false);
-    };
-
     return (
         <>
             <div>
@@ -24,14 +14,11 @@ export default function Basic() {
                 <div className={styles.mainContainer}>
                     <Titles />
                     {basic_data.map(table => <Words data={table} key={table.id} />)}
-                    <AddNewWord handleNewWord={handleNewWord} />
-                    {newWord ? <div>hello</div> : ''}
-                    <div className={styles.gameBtnContainer}>
-                        <Link to='/basic_game' className={styles.link}>
-                            <button className={styles.gameBtn}>practice</button>
-                        </Link>
-                    </div>
-
+                </div>
+                <div className={styles.gameBtnContainer}>
+                    <Link to='/basic_game' className={styles.link}>
+                        <button className={styles.gameBtn}><ExtensionIcon /></button>
+                    </Link>
                 </div>
             </div>
         </>

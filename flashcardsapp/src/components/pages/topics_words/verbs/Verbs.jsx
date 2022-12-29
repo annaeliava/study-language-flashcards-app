@@ -1,22 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
-import AddNewWord from "../../../common/table/addNewWord/addNewWord";
 import Titles from "../../../common/table/firstLine/Titles";
 import Words from "../../../common/table/words/Words";
 import styles from "../Topics.module.scss";
 import verbs_data from "./verbs-topic_data";
+import ExtensionIcon from '@mui/icons-material/Extension';
 
 export default function Verbs() {
-    const [newWord, setNewWord] = useState(false);
-    //shows form for new word
-    const handleNewWord = () => {
-        setNewWord(true);
-    };
-    //hides form 
-    const saveNewWord = () => {
-        setNewWord(false);
-    };
-
     return (
         <>
             <div>
@@ -24,11 +14,9 @@ export default function Verbs() {
                 <div className={styles.mainContainer}>
                     <Titles />
                     {verbs_data.map(table => <Words data={table} key={table.id} />)}
-                    <AddNewWord handleNewWord={handleNewWord} />
-                    {newWord ? console.log('hi') : ''}
                     <div className={styles.gameBtnContainer}>
                         <Link to='/verbs_game' className={styles.link}>
-                            <button className={styles.gameBtn}>practice</button>
+                            <button className={styles.gameBtn}><ExtensionIcon /></button>
                         </Link>
                     </div>
                 </div>
