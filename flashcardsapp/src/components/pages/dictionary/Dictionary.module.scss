@@ -14,6 +14,11 @@
     color: $customBlue;
 }
 
+.emptyInput {
+    border-color: $customRed;
+    border-width: 2px;
+}
+
 @media screen and (max-width: 480px)  {
     .title {
         margin-top: 15px;

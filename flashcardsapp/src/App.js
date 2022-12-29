@@ -28,15 +28,16 @@ function App() {
 
   const createOrUpdate = (newWord) => {
     const wordIndex = words.findIndex(word => word.id === newWord.id);
-    if(wordIndex >= 0) {
-      setWords([...words.slice(0, wordIndex), newWord, ...words.slice(wordIndex + 1)]);
+    let newWords;
+    if(wordIndex !== -1) {
+      newWords = [...words.slice(0, wordIndex), newWord, ...words.slice(wordIndex + 1)];
     } else {
-      setWords([...words, newWord]);
+      newWords = [...words, newWord];
     }
-    setWords([...words, newWord]);
+    setWords(newWords);
   };
 
-  //delete a word
+  //deletes a word
   const deleteWord = (wordID) => {
     const filteredWords = words.filter(word => word.id !== wordID);
     setWords(filteredWords);

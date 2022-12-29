@@ -5,47 +5,70 @@ import DoneIcon from '@mui/icons-material/Done';
 import CreateIcon from '@mui/icons-material/Create';
 
 export default function Words(props) {
-    const { data, deleteWord, handleChange, createOrUpdate } = props;
+    const { data, deleteWord, createOrUpdate } = props;
 
-    const [edit, setEdit] = useState(false);
+    const [editMode, setEditMode] = useState(false);
+    const [edit, setEdit] = useState(data);
+
     //shows edit buttons
     const handleEditTable = () => {
-        setEdit(true);
+        setEditMode(true);
     };
-    //hides edit buttons
-    const handleSaveEditing = () => {
-        setEdit(false);
-        createOrUpdate();
+    //hides edit buttons and saves changes
+    const handleSaveEditing = (e) => {
+        e.preventDefault();
+
+        if (!edit.english.match(/[0 - 9]/) && !edit.russian.match(/[0 - 9]/) && edit.english !== '' && edit.russian !== '' && !edit.transcription.match(/[0 - 9]/)) {
+            setEditMode(false);
+            createOrUpdate(edit);
+        } else {
+            alert('please, type correctly');
+        };
+    };
+    //editing
+    const handleEditing = (e) => {
+        setEdit({ ...edit, [e.target.dataset.name]: e.target.value });
     };
 
     return (
         <>
             <div className={styles.innerContainer}>
                 <div className={styles.tableNumber}>{data.id}</div>
-                <input
-                    type='text'
-                    name='english'
-                    className={styles.tableWord}
-                    value={data.english}
-                    onChange={(e) => handleChange('english', e.target.value)} />
-                <input
-                    type='text'
-                    name='transcription'
-                    className={styles.tableTranscription}
-                    value={data.transcription}
-                    onChange={(e) => handleChange('transcription', e.target.value)} />
-                <input
-                    type='text'
-                    name='russian'
-                    className={styles.tableTranslation}
-                    value={data.russian}
-                    onChange={(e) => handleChange('russian', e.target.value)} />
-                {edit ? <div className={styles.editBtnContainer}>
-                    <button className={styles.deleteWordBtn} onClick={() => deleteWord(data.id)}><DeleteOutlineIcon /></button>
-                    <button className={styles.saveEditBtn} onClick={handleSaveEditing}><DoneIcon /></button>
-                </div>
+                {editMode ?
+                    <>
+                        <input
+                            type='text'
+                            name='english'
+                            className={`${styles.tableWord} ${styles.inputPadding}`}
+                            data-name={'english'}
+                            value={edit.english}
+                            onChange={handleEditing} />
+                        <input
+                            type='text'
+                            name='transcription'
+                            className={`${styles.tableTranscription} ${styles.inputPadding}`}
+                            data-name={'transcription'}
+                            value={edit.transcription}
+                            onChange={handleEditing} />
+                        <input
+                            type='text'
+                            name='russian'
+                            className={`${styles.tableTranslation} ${styles.inputPadding}`}
+                            data-name={'russian'}
+                            value={edit.russian}
+                            onChange={handleEditing} />
+                        <div className={styles.editBtnContainer}>
+                            <button className={styles.deleteWordBtn} onClick={() => deleteWord(data.id)}><DeleteOutlineIcon /></button>
+                            <button className={styles.saveEditBtn} onClick={handleSaveEditing}><DoneIcon /></button>
+                        </div>
+                    </>
                     :
-                    <button className={styles.editTable} onClick={handleEditTable}><CreateIcon /></button>
+                    <>
+                        <div className={styles.tableWord}>{edit.russian}</div>
+                        <div className={styles.tableTranscription}>{edit.transcription}</div>
+                        <div className={styles.tableTranslation}>{edit.russian}</div>
+                        <button className={styles.editTable} onClick={handleEditTable}><CreateIcon /></button>
+                    </>
                 }
             </div>
         </>

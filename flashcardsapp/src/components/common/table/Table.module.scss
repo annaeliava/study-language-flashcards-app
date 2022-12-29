@@ -4,12 +4,13 @@
 .innerContainer,
 .newWordContainer {
     font-family: $mainFont;
-    font-weight: 700;
-    color: $customBlue;
 }
 
-.titleContainer {
+.titleContainer,
+.tableNumber {
     text-transform: uppercase;
+    font-weight: 700;
+    color: $customBlue;
 }
 
 .newWordContainer {
@@ -98,13 +99,17 @@
 .tableWord,
 .tableTranscription,
 .tableTranslation {
-    padding-left: 35px;
     border: 2px solid $customGray;
+    color: black;
     cursor: pointer;
     
     &:hover {
         border: 2px solid $customBlue;
     }
+}
+
+.inputPadding {
+    padding-left: 35px;
 }
 
 .addBtn,

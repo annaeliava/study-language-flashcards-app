@@ -39,7 +39,7 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
             alert('please, add a new word!');
         }
     };
-    //typing in input
+    //typing in input (new word)
     const handleChange = (fieldName, value) => {
         const temp = { ...newWord };
         temp[fieldName] = value;
@@ -58,7 +58,6 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
                                 <Words
                                     data={word}
                                     key={word.id}
-                                    handleChange={handleChange}
                                     deleteWord={deleteWord}
                                     createOrUpdate={createOrUpdate} />
                         )
