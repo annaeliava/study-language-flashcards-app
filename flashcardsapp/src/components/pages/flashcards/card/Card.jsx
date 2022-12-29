@@ -23,10 +23,3 @@ export default function Card(props) {
         </>
     );
 }
-
-/*Card.defaultProps = {
-    topic: '...',
-    english: 'Hello',
-    transcription: 'World',
-    russian: 'Sorry'
-}; почему не работает */

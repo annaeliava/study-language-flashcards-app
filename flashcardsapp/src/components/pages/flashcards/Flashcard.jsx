@@ -41,12 +41,26 @@ export default function Flashcards() {
     return (
         <>
             <div className={styles.container}>
-                {learnt > 0 ? <div className={styles.counter}>You've learnt {learnt} {learnt < 2 ? 'word' : 'words'}!</div> : ''}
+                {
+                    learnt > 0 ?
+                        <div className={styles.counter}>
+                            You've learnt {learnt} {learnt < 2 ? 'word' : 'words'}!
+                        </div>
+                        : ''
+                }
                 <div className={styles.cardContainer}>
                     <button className={styles.prevBtn} onClick={handleBack}>
                         <ArrowBackIcon />
                     </button>
-                    {cards.map(card => <Card data={card} key={card.id} learntWords={learntWords} />)[currentIndex]}
+                    {
+                        cards.map(
+                            card =>
+                                <Card
+                                    data={card}
+                                    key={card.id}
+                                    learntWords={learntWords} />)
+                        [currentIndex]
+                    }
                     <button className={styles.nextBtn} onClick={handleNext}>
                         <ArrowForwardIcon />
                     </button>
