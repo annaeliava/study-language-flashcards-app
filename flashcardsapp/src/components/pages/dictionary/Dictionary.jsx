@@ -14,6 +14,7 @@ const initialWord = {
 export default function Dictionary({ createOrUpdate, words, deleteWord }) {
     const [newWord, setNewWord] = useState(initialWord);
     const [input, setInput] = useState(false);
+    const [dictionary] = useState(true);
 
     //shows form for a new word
     const handleNewWord = () => {
@@ -58,6 +59,7 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
                                 <Words
                                     data={word}
                                     key={word.id}
+                                    dictionary={dictionary}
                                     deleteWord={deleteWord}
                                     createOrUpdate={createOrUpdate} />
                         )

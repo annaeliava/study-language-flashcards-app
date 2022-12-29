@@ -5,7 +5,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import CreateIcon from '@mui/icons-material/Create';
 
 export default function Words(props) {
-    const { data, deleteWord, createOrUpdate } = props;
+    const { data, deleteWord, createOrUpdate, dictionary } = props;
 
     const [editMode, setEditMode] = useState(false);
     const [edit, setEdit] = useState(data);
@@ -67,7 +67,7 @@ export default function Words(props) {
                         <div className={styles.tableWord}>{edit.russian}</div>
                         <div className={styles.tableTranscription}>{edit.transcription}</div>
                         <div className={styles.tableTranslation}>{edit.russian}</div>
-                        <button className={styles.editTable} onClick={handleEditTable}><CreateIcon /></button>
+                        {dictionary ? <button className={styles.editTable} onClick={handleEditTable}><CreateIcon /></button> : ''}
                     </>
                 }
             </div>
