@@ -28,11 +28,16 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const temp = { ...newWord };
-        temp.id = Math.max(...words.map(table => table.id)) + 1;;
-        createOrUpdate(temp);
-        setNewWord(initialWord);
-        alert('saved!');
+        if (newWord.english !== '' && newWord.russian !== '') {
+            const temp = { ...newWord };
+            temp.id = Math.max(...words.map(table => table.id)) + 1;;
+            createOrUpdate(temp);
+            setNewWord(initialWord);
+            setInput(false);
+            alert('saved!');
+        } else {
+            alert('please, add a new word!');
+        }
     };
     //typing in input
     const handleChange = (fieldName, value) => {
@@ -47,7 +52,17 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
                 <div className={styles.title}>dictionary</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {words.map(word => <Words data={word} key={word.id} handleChange={handleChange} deleteWord={deleteWord} createOrUpdate={createOrUpdate} />)}
+                    {
+                        words.map(
+                            word =>
+                                <Words
+                                    data={word}
+                                    key={word.id}
+                                    handleChange={handleChange}
+                                    deleteWord={deleteWord}
+                                    createOrUpdate={createOrUpdate} />
+                        )
+                    }
                     <AddNewWord handleNewWord={handleNewWord} />
                     {input ?
                         <>
