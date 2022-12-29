@@ -28,7 +28,7 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (newWord.english !== '' && newWord.russian !== '') {
+        if (!newWord.english.match(/[0 - 9]/) && !newWord.russian.match(/[0 - 9]/) && newWord.english !== '' && newWord.russian !== '' && !newWord.transcription.match(/[0 - 9]/)) {
             const temp = { ...newWord };
             temp.id = Math.max(...words.map(table => table.id)) + 1;;
             createOrUpdate(temp);
