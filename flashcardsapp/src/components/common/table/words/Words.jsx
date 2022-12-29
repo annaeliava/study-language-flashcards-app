@@ -67,7 +67,14 @@ export default function Words(props) {
                         <div className={styles.tableWord}>{edit.russian}</div>
                         <div className={styles.tableTranscription}>{edit.transcription}</div>
                         <div className={styles.tableTranslation}>{edit.russian}</div>
-                        {dictionary ? <button className={styles.editTable} onClick={handleEditTable}><CreateIcon /></button> : ''}
+                        {
+                            dictionary ?
+                                <button className={styles.editTable} onClick={handleEditTable}>
+                                    <CreateIcon />
+                                </button>
+                                :
+                                ''
+                        }
                     </>
                 }
             </div>

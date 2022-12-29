@@ -53,7 +53,7 @@ function App() {
             <Route path='/verbs' element={<Verbs />} />
             <Route path='/food' element={<Food />} />
             <Route path='/clothes' element={<Clothes />} />
-            <Route path='/game' element={<Flashcards />} />
+            <Route path='/game' element={<Flashcards words={words} />} />
             <Route path='/basic_game' element={<BasicGame />}/>
             <Route path='/clothes_game' element={<ClothesGame />} />
             <Route path='/verbs_game' element={<VerbsGame />} />
