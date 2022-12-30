@@ -3,6 +3,7 @@ import styles from "../Table.module.scss";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import DoneIcon from '@mui/icons-material/Done';
 import CreateIcon from '@mui/icons-material/Create';
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
 export default function Words(props) {
     const { data, deleteWord, createOrUpdate, dictionary } = props;
@@ -33,7 +34,7 @@ export default function Words(props) {
     return (
         <>
             <div className={styles.innerContainer}>
-                <div className={styles.tableNumber}>{data.id}</div>
+                <div className={styles.tableNumber}><CloudQueueIcon /></div>
                 {editMode ?
                     <>
                         <input
@@ -64,7 +65,7 @@ export default function Words(props) {
                     </>
                     :
                     <>
-                        <div className={styles.tableWord}>{edit.russian}</div>
+                        <div className={styles.tableWord}>{edit.english}</div>
                         <div className={styles.tableTranscription}>{edit.transcription}</div>
                         <div className={styles.tableTranslation}>{edit.russian}</div>
                         {

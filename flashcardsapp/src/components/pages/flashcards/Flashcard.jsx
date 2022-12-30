@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Card from './card/Card';
+import Spinner from '../spinner/Spinner';
 import styles from './Flashcard.module.scss';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import basic_data from '../topics_words/basic/basic-topic_data';
+import { useOutletContext } from 'react-router-dom';
 
-export default function Flashcards({ words }) {
+export default function Flashcards() {
+    const { words, loading } = useOutletContext();
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [learnt, setLearnt] = useState(0);
     //a counter of the learnt words
@@ -30,7 +33,7 @@ export default function Flashcards({ words }) {
     };
     //shows a next card
     const handleNext = () => {
-        const isLastCard = currentIndex === basic_data.length - 1;
+        const isLastCard = currentIndex === words.length - 1;
         const newIndex = isLastCard ? handleFinish() : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
@@ -49,7 +52,7 @@ export default function Flashcards({ words }) {
                     <button className={styles.prevBtn} onClick={handleBack}>
                         <ArrowBackIcon />
                     </button>
-                    {
+                    {loading ?
                         words.map(
                             card =>
                                 <Card
@@ -57,12 +60,14 @@ export default function Flashcards({ words }) {
                                     key={card.id}
                                     learntWords={learntWords} />)
                         [currentIndex]
+                        :
+                        <Spinner />
                     }
                     <button className={styles.nextBtn} onClick={handleNext}>
                         <ArrowForwardIcon />
                     </button>
                 </div>
-                <div className={styles.numbers}>{currentIndex + 1} / {basic_data.length}</div>
+                <div className={styles.numbers}>{currentIndex + 1} / {words.length}</div>
             </div>
         </>
     );

@@ -9,6 +9,7 @@
     "@fontsource/genos": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.10.9",
+    "@mui/joy": "^5.0.0-alpha.60",
     "@mui/material": "^5.11.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",

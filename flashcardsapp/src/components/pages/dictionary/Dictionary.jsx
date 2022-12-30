@@ -3,15 +3,19 @@ import styles from './Dictionary.module.scss';
 import 'normalize.css';
 import Words from '../../common/table/words/Words';
 import Titles from '../../common/table/firstLine/Titles';
+import Spinner from '../spinner/Spinner';
 import AddNewWord from '../../common/table/addNewWord/addNewWord';
 import DoneIcon from '@mui/icons-material/Done';
 import ClearIcon from '@mui/icons-material/Clear';
+import { useOutletContext } from 'react-router-dom';
 
 const initialWord = {
     english: '', russian: '', transcription: ''
 };
 
-export default function Dictionary({ createOrUpdate, words, deleteWord }) {
+export default function Dictionary() {
+    const { words, createOrUpdate, deleteWord, loading } = useOutletContext();
+
     const [newWord, setNewWord] = useState(initialWord);
     const [input, setInput] = useState(false);
     const [dictionary] = useState(true);
@@ -46,14 +50,13 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
         temp[fieldName] = value;
         setNewWord(temp);
     };
-
     return (
         <>
             <div className="container">
                 <div className={styles.title}>dictionary</div>
                 <div className={styles.mainContainer}>
                     <Titles />
-                    {
+                    {loading ?
                         words.map(
                             word =>
                                 <Words
@@ -63,6 +66,8 @@ export default function Dictionary({ createOrUpdate, words, deleteWord }) {
                                     deleteWord={deleteWord}
                                     createOrUpdate={createOrUpdate} />
                         )
+                        :
+                        <Spinner />
                     }
                     <AddNewWord handleNewWord={handleNewWord} />
                     {input ?
