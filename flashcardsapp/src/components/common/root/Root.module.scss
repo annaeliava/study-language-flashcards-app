@@ -14,17 +14,26 @@ body {
     .App {
         grid-template-rows: 56px minmax(823px, auto) 90px;
     }
+
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 @media screen and (min-width:481px) and (max-width:768px)  {
     main {
         padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
 @media screen and (min-width:769px) and (max-width:1279px) {
     main {
         padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

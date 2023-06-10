@@ -75,11 +75,6 @@
     }
 }
 
-.deleteWordBtn,
-.saveEditBtn {
-    height: 54px;
-}
-
 .saveBtn,
 .saveEditBtn {
     border: 2px solid $customGreen;
@@ -141,6 +136,7 @@
 .editBtnContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 480px) {
@@ -154,6 +150,7 @@
     .innerContainer,
     .newWordContainer {
         display: grid;
+        align-items: center;
         column-gap: 8px;
         row-gap: 5px;
         font-size: 12px;
@@ -163,14 +160,26 @@
     .titleContainer,
     .innerContainer,
     .newWordContainer {
-        grid-template-columns: repeat(3, 105px);
+        grid-template-columns: repeat(3, 105px) 54px;
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
     .tableTranslationTitle {
-        width: 105px;
+        width: fit-content;
+        min-width: 105px;
         height: 36px;
+    }
+
+    .editBtnContainer {
+        gap: 2px;
+    }
+
+    .deleteWordBtn,
+    .saveEditBtn {
+        width: fit-content;
+        min-width: 34px;
+        height: fit-content;
     }
 
     .tableWordTitle,
@@ -181,12 +190,18 @@
     .tableTranscription {
         border-radius: 10px;
     }
+
+    .editTable {
+        width: 36px;
+        height: 36px;
+    }
     
     .addBtn,
-    .editTable,
     .cancelBtn {
-        width: 20px;
-        height: 20px;
+        width: fit-content;
+        min-width: 20px;
+        height: fit-content;
+        min-height: 20px;
     }
     
     .tableNumberTitle,
@@ -221,14 +236,26 @@
     .titleContainer,
     .innerContainer,
     .newWordContainer {
-        grid-template-columns: 50px repeat(3, 180px) 50px;
+        grid-template-columns: 50px repeat(3, 180px) 54px;
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
     .tableTranslationTitle {
-        width: 180px;
+        width: fit-content;
+        min-width: 180px;
         height: 50px;
+    }
+
+    .editBtnContainer {
+        gap: 2px;
+    }
+
+    .deleteWordBtn,
+    .saveEditBtn {
+        width: fit-content;
+        min-width: 34px;
+        height: 54px;
     }
 
     .tableWordTitle,
@@ -282,14 +309,26 @@
     .titleContainer,
     .innerContainer,
     .newWordContainer {
-        grid-template-columns: 50px repeat(3, 200px) 50px;
+        grid-template-columns: 50px repeat(3, 200px) 6.75rem;
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
     .tableTranslationTitle {
-        width: 200px;
+        width: fit-content;
+        min-width: 200px;
         height: 50px;
+    }
+
+    .editBtnContainer {
+        gap: 5px;
+    }
+
+    .deleteWordBtn,
+    .saveEditBtn {
+        min-width: 30px;
+        max-width: 54px;
+        height: 54px;
     }
 
     .tableWordTitle,
@@ -344,13 +383,25 @@
     .titleContainer,
     .innerContainer,
     .newWordContainer {
-        grid-template-columns: 54px repeat(3, 300px) 54px;
+        grid-template-columns: 54px repeat(3, 300px) 108px;
+    }
+
+    .editBtnContainer {
+        gap: 5px;
+    }
+
+    .deleteWordBtn,
+    .saveEditBtn {
+        width: fit-content;
+        min-width: 54px;
+        height: 54px;
     }
     
     .tableWordTitle,
     .tableTranscriptionTitle,
     .tableTranslationTitle {
-        width: 300px;
+        width: fit-content;
+        min-width: 300px;
         height: 65px;
     }
     
