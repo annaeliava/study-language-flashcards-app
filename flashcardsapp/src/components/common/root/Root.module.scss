@@ -4,10 +4,6 @@ body {
     background-color: $bodyColor;
 }
 
-main {
-    margin-top: 20px;
-}
-
 .App {
     display: grid;
     grid-template-rows: 89px minmax(823px, auto) 84px;
@@ -17,5 +13,23 @@ main {
 @media screen and (max-width: 480px) {
     .App {
         grid-template-rows: 56px minmax(823px, auto) 90px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px)  {
+    main {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1279px) {
+    main {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main {
+        padding-top: 20px;
     }
 }
