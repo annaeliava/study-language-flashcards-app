@@ -10,6 +10,7 @@
     border: 1px $customWhite;
     border-radius: 46px;
     background-color: $customWhite;
+    box-sizing: border-box;
     cursor: pointer;
     &:hover{
         .word,
@@ -86,8 +87,9 @@
 
 @media screen and (max-width: 480px) {
     .cardBody {
-        padding-top: 5px;
-        width: 250px;
+        padding: 5px 15px 5px 15px;
+        min-width: 250px;
+        width: fit-content;
         height: 180px;
     }
 
@@ -120,8 +122,9 @@
 
 @media screen and (min-width:481px) and (max-width:768px) {
     .cardBody {
-        padding-top: 5px;
-        width: 325px;
+        padding: 5px 15px 5px 15px;
+        min-width: 325px;
+        width: fit-content;
         height: 220px;
     }
 
@@ -154,8 +157,9 @@
 
 @media screen and (min-width:769px) and (max-width:1279px) {
     .cardBody {
-        padding-top: 11px;
-        width: 635px;
+        padding: 11px 20px 11px 20px;
+        min-width: 635px;
+        width: fit-content;
         height: 415px;
     }
 
@@ -192,8 +196,9 @@
 
 @media screen and (min-width:1280px) {
     .cardBody {
-        padding-top: 11px;
-        width: 652px;
+        padding: 11px 20px 11px 20px;
+        min-width: 652px;
+        width: fit-content;
         height: 430px;
     }
 
