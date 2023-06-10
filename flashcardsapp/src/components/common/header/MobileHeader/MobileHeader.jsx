@@ -125,7 +125,7 @@ export default function MobileHeader() {
                     </DrawerHeader>
                     <Divider />
                     <List>
-                        {lists.map(list => <HeaderList data={list} handleDrawerClose={handleDrawerClose} key={list.id} />)}
+                        {lists.map((list, index) => <HeaderList data={list} handleDrawerClose={handleDrawerClose} key={index} />)}
                     </List>
                 </Drawer>
             </Box>

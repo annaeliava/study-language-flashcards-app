@@ -24,10 +24,10 @@ export default function Main() {
         <>
             <div className={styles.container}>
                 <div className={styles.topicContainer}>
-                    {topics_data.map(topic => <Topic data={topic} key={topic.id} />)}
+                    {topics_data.map((topic, index) => <Topic data={topic} key={index} />)}
                 </div>
                 <div className={styles.sidebarContainer}>
-                    {sidebar_data.map(menu => <Sidebar data={menu} key={menu.id} />)}
+                    {sidebar_data.map((menu, index) => <Sidebar data={menu} key={index} />)}
                 </div>
             </div>
         </>
