@@ -4,9 +4,10 @@ import React, {
     useEffect, 
     useContext
 } from 'react';
-import {Outlet} from 'react-router-dom';
+import {Outlet, ScrollRestoration} from 'react-router-dom';
 import {Header, Footer} from '../index';
 import APIContext from '../../../apiContext';
+import ScrollToTop from '../helpers/ScrollToTop';
 
 export default function Root() {
     const [words, setWords] = useState([]);
@@ -48,6 +49,8 @@ export default function Root() {
     const context = {words, createOrUpdate, deleteWord, loading, setLoading};
 
     return (
+        <>
+        <ScrollToTop/>
         <div className={styles.App}>
             <Header />
             <main>
@@ -55,5 +58,6 @@ export default function Root() {
             </main>
             <Footer />
         </div>
+        </>
     );
 }
