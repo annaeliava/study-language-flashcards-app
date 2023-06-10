@@ -19,11 +19,11 @@ export default function Words(props) {
     const handleSaveEditing = (e) => {
         e.preventDefault();
 
-        if (!edit.english.match(/[0 - 9]/) && !edit.russian.match(/[0 - 9]/) && edit.english !== '' && edit.russian !== '' && !edit.transcription.match(/[0 - 9]/)) {
+        if (edit.english.length > 0 && edit.russian.length > 0) {
             setEditMode(false);
             createOrUpdate(edit);
         } else {
-            alert('please, type correctly');
+            alert('please, type a word');
         };
     };
     //editing
