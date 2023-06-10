@@ -12,8 +12,8 @@ export default function HeaderList(props) {
     const { data, handleDrawerClose } = props;
     return (
         <>
-            <Link to={data.link} style={{ textDecoration: 'none', color: 'black' }} >
-                <ListItem key={data.text} disablePadding>
+            <Link to={data.link} style={{ textDecoration: 'none', color: 'black' }}>
+                <ListItem disablePadding>
                     <ListItemButton onClick={handleDrawerClose}>
                         <ListItemIcon>
                             <ChevronRightIcon />
