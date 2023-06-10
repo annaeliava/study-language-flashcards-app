@@ -10,7 +10,6 @@ import BasicGame from './flashcards/flashcards for topics/basic';
 import ClothesGame from './flashcards/flashcards for topics/clothes';
 import FoodGame from './flashcards/flashcards for topics/food';
 import VerbsGame from './flashcards/flashcards for topics/verbs';
-import Login from './login';
 
 
 export {
@@ -26,5 +25,4 @@ export {
     ClothesGame,
     FoodGame,
     VerbsGame,
-    Login
 }

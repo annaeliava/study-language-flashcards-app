@@ -13,8 +13,7 @@ import {
     BasicGame,
     ClothesGame,
     VerbsGame,
-    FoodGame,
-    Login
+    FoodGame
 } from './components/pages';
 
 const router = createBrowserRouter([
@@ -33,7 +32,6 @@ const router = createBrowserRouter([
             { path: "/food", element: <Food/>},
             { path: "/verbs", element: <Verbs/>},
             { path: "/basic", element: <Basic/>},
-            { path: "/users", element: <Login/>},
         ]
     },
 ]);

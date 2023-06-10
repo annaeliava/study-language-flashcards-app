@@ -7,6 +7,7 @@
     border: 1px $customWhite;
     border-radius: 15px;
     background-color: $customWhite;
+    box-sizing: border-box;
 }
 
 .topic,
@@ -146,11 +147,9 @@
     .container {
         margin-left: 89px;
         margin-bottom: 48px;
-        padding-top: 40px;
-        padding-left: 53px;
-        padding-right: 53px;
-        width: 600px;
-        height: 100px;
+        padding: 40px 53px 40px 53px;
+        width: 817px;
+        height: 130px;
         &:hover {
             border: 3px solid $customBlue;
         }
