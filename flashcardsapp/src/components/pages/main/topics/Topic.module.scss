@@ -26,11 +26,10 @@
     .container {
         margin-left: 10px;
         margin-bottom: 10px;
-        padding-top: 39px;
-        padding-left: 53px;
-        padding-right: 53px;
-        width: 250px;
-        height: 60px;
+        padding: 40px 53px 40px 53px;
+        min-width: 90vw;
+        width: fit-content;
+        height: 120px;
         &:hover {
             border: 3px solid $customBlue;
         }
@@ -56,11 +55,10 @@
     .container {
         margin-left: 20px;
         margin-bottom: 30px;
-        padding-top: 39px;
-        padding-left: 53px;
-        padding-right: 53px;
-        width: 400px;
-        height: 58px;
+        padding: 40px 53px 40px 53px;
+        min-width: 90vw;
+        width: fit-content;
+        height: 120px;
         &:hover {
             border: 3px solid $customBlue;
         }
@@ -86,11 +84,9 @@
     .container {
         margin-left: 50px;
         margin-bottom: 48px;
-        padding-top: 40px;
-        padding-left: 53px;
-        padding-right: 53px;
-        width: 480px;
-        height: 100px;
+        padding: 40px 50px 40px 50px;
+        width: 600px;
+        height: 120px;
         &:hover {
             border: 3px solid $customBlue;
         }
@@ -117,11 +113,9 @@
     .container {
         margin-left: 89px;
         margin-bottom: 48px;
-        padding-top: 40px;
-        padding-left: 53px;
-        padding-right: 53px;
-        width: 600px;
-        height: 100px;
+        padding: 40px 53px 40px 53px;
+        width: 817px;
+        height: 130px;
         &:hover {
             border: 3px solid $customBlue;
         }
