@@ -48,8 +48,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 const lists = [
-    { text: 'Dictionary', link: '/dictionary' },
-    { text: 'Flashcards', link: '/game' }
+    { text: 'Dictionary', link: '/study-language-flashcards-app/dictionary' },
+    { text: 'Flashcards', link: '/study-language-flashcards-app/game' }
 ];
 
 export default function MobileHeader() {
@@ -81,7 +81,7 @@ export default function MobileHeader() {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Link to='/' className={styles.links}>
+                        <Link to='/study-language-flashcards-app' className={styles.links}>
                             <IconButton>
                                 <Typography component="div"
                                     sx={{
@@ -95,13 +95,6 @@ export default function MobileHeader() {
                                 </Typography>
                             </IconButton>
                         </Link>
-                        <IconButton
-                            sx={{
-                                display: { xs: 'none', sm: 'block', },
-                                marginLeft: 45,
-                            }}>
-                            <img className={styles.myaccountMUI} src='img/Userpic.svg' alt='My account' />
-                        </IconButton>
                     </Toolbar>
                 </AppBar>
                 <Drawer
