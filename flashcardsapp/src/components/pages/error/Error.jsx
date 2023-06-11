@@ -8,7 +8,7 @@ export default function Error() {
             <div className={styles.container}>
                 <div className={styles.errorTitle}>Oops!</div>
                 <div className={styles.errorMessage}>We can't find the page that you're looking for :(</div>
-                <Link to='/' className={styles.links}>
+                <Link to='/study-language-flashcards-app' className={styles.links}>
                     <div className={styles.btnContainer}>
                         <button className={styles.button}>back to home</button>
                     </div>

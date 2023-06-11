@@ -15,7 +15,7 @@ export default function Verbs() {
                     <Titles />
                     {verbs_data.map(table => <Words data={table} key={table.id} />)}
                     <div className={styles.gameBtnContainer}>
-                        <Link to='/verbs_game' className={styles.link}>
+                        <Link to='/study-language-flashcards-app/verbs_game' className={styles.link}>
                             <button className={styles.gameBtn}><ExtensionIcon /></button>
                         </Link>
                     </div>

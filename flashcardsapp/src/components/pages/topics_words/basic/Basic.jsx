@@ -16,7 +16,7 @@ export default function Basic() {
                     {basic_data.map(table => <Words data={table} key={table.id} />)}
                 </div>
                 <div className={styles.gameBtnContainer}>
-                    <Link to='/basic_game' className={styles.link}>
+                    <Link to='/study-language-flashcards-app/basic_game' className={styles.link}>
                         <button className={styles.gameBtn}><ExtensionIcon /></button>
                     </Link>
                 </div>

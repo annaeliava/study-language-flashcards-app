@@ -11,7 +11,7 @@
     }
 
     .homeLink, 
-    .myaccountLink, 
+    .aboutlink,
     .contactsLink {
         margin-bottom: 8px;
         font-family: $mainFont;
@@ -29,10 +29,6 @@
             color: $hoverColor;
         }
     }
-
-    .aboutlink {
-        display: none;
-    }
 }
 
 @media only screen and (min-width: 930px) {
@@ -46,7 +42,6 @@
     }
 
     .homeLink, 
-    .myaccountLink, 
     .aboutlink, 
     .contactsLink {
         font-family: $mainFont;

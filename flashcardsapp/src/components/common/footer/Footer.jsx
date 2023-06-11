@@ -8,10 +8,9 @@ function Footer() {
         <>
             <footer>
                 <nav className={styles.container}>
-                    <Link to='/' className={styles.homeLink} style={{ textDecoration: 'none' }}>home</Link>
-                    <Link to='/users' className={styles.myaccountLink} style={{ textDecoration: 'none' }}>account</Link>
-                    <Link to='/about' className={styles.aboutlink} style={{ textDecoration: 'none' }}>about</Link>
-                    <Link to='/contacts' className={styles.contactsLink} style={{ textDecoration: 'none' }}>contacts</Link>
+                    <Link to='/study-language-flashcards-app' className={styles.homeLink} style={{ textDecoration: 'none' }}>home</Link>
+                    <Link to='/study-language-flashcards-app/about' className={styles.aboutlink} style={{ textDecoration: 'none' }}>about</Link>
+                    <Link to='/study-language-flashcards-app/contacts' className={styles.contactsLink} style={{ textDecoration: 'none' }}>contacts</Link>
                 </nav>
             </footer>
         </>

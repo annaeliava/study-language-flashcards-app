@@ -15,7 +15,7 @@ export default function Clothes() {
                     <Titles />
                     {clothes_data.map(table => <Words data={table} key={table.id} />)}
                     <div className={styles.gameBtnContainer}>
-                        <Link to='/clothes_game' className={styles.link}>
+                        <Link to='/study-language-flashcards-app/clothes_game' className={styles.link}>
                             <button className={styles.gameBtn}><ExtensionIcon /></button>
                         </Link>
                     </div>
