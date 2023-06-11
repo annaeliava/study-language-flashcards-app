@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Root />, 
     errorElement: <Error />, 
     children: [
-            { path: "/", element: <Main /> },
+            { path: "/study-language-flashcards-app", element: <Main /> },
             { path: "/dictionary", element: <Dictionary /> },
             { path: "/game", element: <Flashcards/>},
             { path: "/food_game", element: <FoodGame/>},
