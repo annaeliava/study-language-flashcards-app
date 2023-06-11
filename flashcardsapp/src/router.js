@@ -17,11 +17,11 @@ import {
 } from './components/pages';
 
 const router = createBrowserRouter([
-    { path: "", 
+    { path: "/flashcards-app", 
     element: <Root />, 
     errorElement: <Error />, 
     children: [
-            { path: "/study-language-flashcards-app/", element: <Main /> },
+            { path: "/", element: <Main /> },
             { path: "/dictionary", element: <Dictionary /> },
             { path: "/game", element: <Flashcards/>},
             { path: "/food_game", element: <FoodGame/>},
