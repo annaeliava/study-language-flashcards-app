@@ -17,7 +17,7 @@ import {
 } from './components/pages';
 
 const router = createBrowserRouter([
-    { path: "/flashcards-app", 
+    { path: "", 
     element: <Root />, 
     errorElement: <Error />, 
     children: [
