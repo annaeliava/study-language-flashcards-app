@@ -1,7 +1,7 @@
 {
   "name": "flashcardsapp",
   "version": "0.1.0",
-  "homepage": "https://annaeliava.github.io/study-language-flashcards-app/",
+  "homepage": "https://annaeliava.github.io/study-language-flashcards-app",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
