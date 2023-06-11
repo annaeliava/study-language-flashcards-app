@@ -21,7 +21,7 @@ export default function Header() {
               <HomeIcon sx={{ fontSize: 40 }} className={styles.homeBtn} />
             </Link>
             <Link to='/users' className={styles.links}>
-              <img className={styles.myaccount} src='img/userpic.svg' alt='My account' />
+              <img className={styles.myaccount} src='img/Userpic.svg' alt='My account' />
             </Link>
           </nav>
         </div>

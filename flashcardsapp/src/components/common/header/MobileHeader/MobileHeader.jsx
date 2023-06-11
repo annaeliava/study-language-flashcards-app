@@ -100,7 +100,7 @@ export default function MobileHeader() {
                                 display: { xs: 'none', sm: 'block', },
                                 marginLeft: 45,
                             }}>
-                            <img className={styles.myaccountMUI} src='img/userpic.svg' alt='My account' />
+                            <img className={styles.myaccountMUI} src='img/Userpic.svg' alt='My account' />
                         </IconButton>
                     </Toolbar>
                 </AppBar>

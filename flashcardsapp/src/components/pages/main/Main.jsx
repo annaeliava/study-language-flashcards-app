@@ -15,8 +15,8 @@ const topics_data = [
 ];
 
 const sidebar_data = [
-    { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'flashcards', linkTo: 'game' },
-    { pic: 'img/sidebar_dictionary-icon.svg', sidebar: 'dictionary', linkTo: 'dictionary' }
+    { pic: 'img/Sidebar_dictionary-icon.svg', sidebar: 'flashcards', linkTo: 'game' },
+    { pic: 'img/Sidebar_dictionary-icon.svg', sidebar: 'dictionary', linkTo: 'dictionary' }
 ]
 
 export default function Main() {
