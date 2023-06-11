@@ -1,6 +1,6 @@
 export default class service {
     constructor() {
-        this.baseURL = "http://itgirlschool.justmakeit.ru/api/words"
+        this.baseURL = "https://itgirlschool.justmakeit.ru/api/words"
     }
     checkResponse = async (response) => {
         if (!response.ok) {
