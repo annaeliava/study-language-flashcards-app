@@ -4,10 +4,11 @@ import Spinner from '../spinner/Spinner';
 import styles from './Flashcard.module.scss';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useNavigate } from 'react-router-dom';
 
 export default function Flashcards() {
     const { words, loading } = useOutletContext();
+    const navigate = useNavigate();
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [learnt, setLearnt] = useState(0);
@@ -18,11 +19,14 @@ export default function Flashcards() {
     //displays alert with the learnt words
     const handleFinish = () => {
         if (learnt < 2) {
-            alert(`You have learnt ${learnt} word :( Try again!`);
+            alert(`You have learnt ${learnt} word :( Keep learning!`);
+            navigate('/study-language-flashcards-app/dictionary');
         } else if (learnt <= 5) {
-            alert(`You have learnt ${learnt} words :( Try again!`);
+            alert(`You have learnt ${learnt} words :( Keep learning!`);
+            navigate('/study-language-flashcards-app/dictionary');
         } else {
             alert(`You have learnt ${learnt} words! Good job!`);
+            navigate('/study-language-flashcards-app');
         }
     }
     //shows a previous card
