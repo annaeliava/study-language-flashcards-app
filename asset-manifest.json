@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/study-language-flashcards-app/static/css/main.ca3fb061.css",
-    "main.js": "/study-language-flashcards-app/static/js/main.16cc1efa.js",
+    "main.css": "/study-language-flashcards-app/static/css/main.b62508b4.css",
+    "main.js": "/study-language-flashcards-app/static/js/main.4c39c6d4.js",
     "static/media/genos-all-700-normal.woff": "/study-language-flashcards-app/static/media/genos-all-700-normal.7488a4c6f7c73de0e336.woff",
+    "static/media/HeaderIcon.svg": "/study-language-flashcards-app/static/media/HeaderIcon.2ddd27861eb53e4eac5100d284c8b5a9.svg",
     "static/media/genos-latin-700-normal.woff2": "/study-language-flashcards-app/static/media/genos-latin-700-normal.423b266883d49e4b3cb7.woff2",
     "static/media/genos-latin-ext-700-normal.woff2": "/study-language-flashcards-app/static/media/genos-latin-ext-700-normal.b702cdf5857de80041f0.woff2",
     "static/media/genos-cherokee-700-normal.woff2": "/study-language-flashcards-app/static/media/genos-cherokee-700-normal.da6892dd196370a7caae.woff2",
     "static/media/genos-vietnamese-700-normal.woff2": "/study-language-flashcards-app/static/media/genos-vietnamese-700-normal.53f16ee85a432018dcea.woff2",
+    "static/media/DictionaryIcon.svg": "/study-language-flashcards-app/static/media/DictionaryIcon.72f2c2877bad6c45dacbc96589903406.svg",
     "index.html": "/study-language-flashcards-app/index.html",
-    "main.ca3fb061.css.map": "/study-language-flashcards-app/static/css/main.ca3fb061.css.map",
-    "main.16cc1efa.js.map": "/study-language-flashcards-app/static/js/main.16cc1efa.js.map"
+    "main.b62508b4.css.map": "/study-language-flashcards-app/static/css/main.b62508b4.css.map",
+    "main.4c39c6d4.js.map": "/study-language-flashcards-app/static/js/main.4c39c6d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca3fb061.css",
-    "static/js/main.16cc1efa.js"
+    "static/css/main.b62508b4.css",
+    "static/js/main.4c39c6d4.js"
   ]
 }
